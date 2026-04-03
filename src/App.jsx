@@ -8,6 +8,13 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import BookAppointment from './pages/BookAppointment';
 
+// New Treatment Pages
+import Treatments from './pages/Treatments';
+import GeneralDentistry from './pages/GeneralDentistry';
+import Orthodontics from './pages/Orthodontics';
+import CosmeticDentistry from './pages/CosmeticDentistry';
+import OralSurgery from './pages/OralSurgery';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -32,6 +39,14 @@ function AnimatedRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<BookAppointment />} />
+        
+        {/* Treatment Routes */}
+        <Route path="/treatments" element={<Treatments />} />
+        <Route path="/treatments/general-dentistry" element={<GeneralDentistry />} />
+        <Route path="/treatments/orthodontics" element={<Orthodontics />} />
+        <Route path="/treatments/cosmetic-dentistry" element={<CosmeticDentistry />} />
+        <Route path="/treatments/oral-surgery" element={<OralSurgery />} />
+
         <Route path="*" element={<Home />} />
       </Routes>
     </div>

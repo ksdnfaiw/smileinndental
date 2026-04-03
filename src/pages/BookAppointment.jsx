@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 
 export default function BookAppointment() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,10 @@ export default function BookAppointment() {
 
   return (
     <div className="pt-0">
+      <SEO 
+        title="Book Appointment | Schedule Your Visit" 
+        description="Book your dental appointment online at Smile Inn Dental Clinics. Experience personalized specialist care in our modern Hyderabad studios."
+      />
       {/* Hero Bar */}
       <section className="bg-primary-container py-16 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_right,_#ccf07320,_transparent)]"></div>

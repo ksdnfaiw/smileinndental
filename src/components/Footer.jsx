@@ -26,15 +26,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Treatments */}
         <div>
           <h5 className="text-lime-400 font-bold mb-6 tracking-[0.2em] uppercase text-xs">Treatments</h5>
           <ul className="space-y-4 text-slate-200">
-            {['General Dentistry', 'Orthodontics', 'Cosmetic Dentistry', 'Oral Surgery'].map(s => (
-              <li key={s}>
-                <NavLink to="/services" className="hover:text-lime-400 transition-colors text-base">{s}</NavLink>
-              </li>
-            ))}
+            <li><NavLink to="/treatments/general-dentistry" className="hover:text-lime-400 transition-colors text-base">General Dentistry</NavLink></li>
+            <li><NavLink to="/treatments/orthodontics" className="hover:text-lime-400 transition-colors text-base">Orthodontics</NavLink></li>
+            <li><NavLink to="/treatments/cosmetic-dentistry" className="hover:text-lime-400 transition-colors text-base">Cosmetic Dentistry</NavLink></li>
+            <li><NavLink to="/treatments/oral-surgery" className="hover:text-lime-400 transition-colors text-base">Oral Surgery</NavLink></li>
           </ul>
         </div>
 

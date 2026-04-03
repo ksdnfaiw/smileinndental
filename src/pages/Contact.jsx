@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', phone: '', branch: 'Nagole Branch', message: '' });
@@ -33,6 +34,10 @@ export default function Contact() {
 
   return (
     <div className="pt-0">
+      <SEO 
+        title="Contact Us | Visit Our Clinics in Nagole & Balapur" 
+        description="Get in touch with Smile Inn Dental Clinics. Two convenient locations in Hyderabad. Contact us for specialist dental care, emergencies, or enquiries."
+      />
       {/* Hero */}
       <section className="bg-primary-container py-24 px-6 md:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#ccf07320,_transparent)]"></div>

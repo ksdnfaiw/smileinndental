@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import SEO from '../components/SEO';
 
 export default function About() {
   const navigate = useNavigate();

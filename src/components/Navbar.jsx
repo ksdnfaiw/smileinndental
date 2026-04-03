@@ -14,8 +14,8 @@ export default function Navbar() {
 
   const links = [
     { to: '/', label: 'Home' },
-    { to: '/services', label: 'Services' },
     { to: '/about', label: 'About Us' },
+    { to: '/treatments', label: 'Treatments' },
     { to: '/contact', label: 'Contact' },
   ];
 
