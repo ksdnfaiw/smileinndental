@@ -1,43 +1,78 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function Contact() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ name: '', phone: '', branch: 'Nagole Branch', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const handleChange = (e) => setFormData(p => ({ ...p, [e.target.name]: e.target.value }));
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: '', phone: '', branch: 'Nagole Branch', message: '' });
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const payload = new FormData();
+      payload.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY');
+      payload.append('subject', `📩 New Enquiry — ${formData.name} — ${formData.branch}`);
+      payload.append('from_name', 'Smile Inn Website — Contact');
+      payload.append('botcheck', ''); // honeypot
+
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value) payload.append(key, value);
+      });
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: payload,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        navigate('/thank-you');
+      } else {
+        setSubmitError('Something went wrong. Please try again or call us directly.');
+      }
+    } catch (error) {
+      setSubmitError('Network error. Please try again or call us at +91 91773 17253.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const branches = [
     {
-      name: 'Nagole Branch', color: 'primary',
-      addr: 'H.No 1-2-3, Main Road, Opposite Metro Station,\nNagole, Hyderabad - 500068',
-      phone: '+91 98765 43210', hours: 'Mon – Sat: 10:00 AM – 8:00 PM',
-      email: 'nagole@smileinn.clinic',
+      name: 'Smile Inn Dental Clinics — Nagole', color: 'primary',
+      addr: 'Gurukrupa Building, 1st Floor, Alkapuri X Road,\nNagole, Hyderabad - 500068',
+      phone: '+91 91773 17253', hours: 'Mon – Sun: 10:00 AM – 8:30 PM',
+      email: 'smileinndentalclinics@gmail.com',
     },
     {
-      name: 'Balapur Branch', color: 'secondary',
-      addr: 'Plot No 45, RCI Road, Near Balapur X Roads,\nBalapur, Hyderabad - 500005',
-      phone: '+91 98765 43211', hours: 'Mon – Sat: 10:00 AM – 8:00 PM',
-      email: 'balapur@smileinn.clinic',
+      name: 'Sri Amrutha Laxmi Dental Hospital — Balapur', color: 'secondary',
+      addr: 'Basupalli Gowra Reddy Complex, RCI Road,\nBalapur, Hyderabad - 500097',
+      phone: '+91 91773 17253', hours: 'Mon – Sat: 10:30 AM – 9:00 PM',
+      email: 'smileinndentalclinics@gmail.com',
     },
   ];
 
   return (
     <div className="pt-0">
       <SEO 
-        title="Contact Us | Visit Our Clinics in Nagole & Balapur" 
-        description="Get in touch with Smile Inn Dental Clinics. Two convenient locations in Hyderabad. Contact us for specialist dental care, emergencies, or enquiries."
+        title="Contact Smile Inn Dental Clinics · Nagole & Balapur"
+        description="Find Smile Inn Dental Clinics in Nagole and Balapur, Hyderabad. Call, WhatsApp, or visit us — open 7 days a week."
+        keywords="contact dentist Hyderabad, dental clinic Nagole address, dental clinic Balapur, Smile Inn phone number, dentist near me Hyderabad"
+        canonicalPath="/contact"
       />
+
       {/* Hero */}
       <section className="bg-primary-container py-24 px-6 md:px-8 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#ccf07320,_transparent)]"></div>
@@ -75,7 +110,7 @@ export default function Contact() {
                       </div>
                       <div className="flex items-center gap-4">
                         <span className={`material-symbols-outlined text-${color}`}>call</span>
-                        <a href={`tel:${phone}`} className="text-on-surface-variant font-bold hover:underline">{phone}</a>
+                        <a href="tel:+919177317253" className="text-on-surface-variant font-bold hover:underline">{phone}</a>
                       </div>
                       <div className="flex items-center gap-4">
                         <span className={`material-symbols-outlined text-${color}`}>schedule</span>
@@ -90,21 +125,46 @@ export default function Contact() {
                 </div>
               ))}
             </div>
+
+            {/* WhatsApp CTA */}
+            <a
+              href="https://wa.me/919177317253?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20dental%20treatment."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-6 bg-green-50 border border-green-200 rounded-xl hover:bg-green-100 transition-all duration-300 group"
+            >
+              <div className="bg-green-500 p-3 rounded-full text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-2xl">chat</span>
+              </div>
+              <div>
+                <div className="font-bold text-green-800 text-lg">WhatsApp Us Directly</div>
+                <div className="text-green-600 text-sm">Quick responses — typically within 15 minutes</div>
+              </div>
+              <span className="material-symbols-outlined text-green-500 ml-auto">arrow_forward</span>
+            </a>
           </div>
 
           {/* Right: Map + Form */}
           <div className="flex flex-col gap-10">
-            {/* Map Placeholder */}
+            {/* Map */}
             <div className="bg-surface-container-low rounded-xl h-80 w-full relative flex items-center justify-center overflow-hidden group">
               <img
-                alt="Map view of Hyderabad"
+                alt="Map showing Smile Inn Dental Clinics locations in Hyderabad"
                 className="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPBuunU3Vzur89mVeRnPT9K22VX0nlevqKPh4exAU7QKaDqeOlah4r4ZxBerV2A9QPadVhqnlcmv0t5lVkEqbo2npjbKVScp9bu2DNA-JncNg0lbNJ1PboT5uVuOLkZgFJJCYl7mV6yQ4t9VFPXsi1pfPzPrAe3PJ_ZU8eVOqk1z2_sFyYqusSaiEuVB0gjYI6TByFllcGzMbTnbHgfasA8k58IYOiCNzlZKeYdP_HJJ9j00XUsianS-b5giZ_j--X_7n2P3UU9bg"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex gap-4">
-                  <button className="btn-primary flex-1 py-3 text-sm">View on Maps</button>
-                  <button className="btn-secondary px-4 border-2 border-outline !bg-transparent">
+                  <button
+                    onClick={() => window.open('https://maps.google.com/?q=Smile+Inn+Dental+Nagole', '_blank')}
+                    className="btn-primary flex-1 py-3 text-sm"
+                  >
+                    View on Maps
+                  </button>
+                  <button 
+                    onClick={() => window.location.href = 'tel:+919177317253'}
+                    className="btn-secondary px-4 border-2 border-outline !bg-transparent"
+                  >
                     <span className="material-symbols-outlined">call</span>
                   </button>
                 </div>
@@ -116,26 +176,31 @@ export default function Contact() {
               <h3 className="text-3xl font-serif text-primary mb-3">Patient Enquiry</h3>
               <p className="text-on-surface-variant mb-10 text-lg leading-relaxed">Fill out the form below and our team will get back to you shortly.</p>
 
-              {submitted && (
-                <div className="mb-8 bg-secondary-container text-on-secondary-container px-8 py-5 rounded-full font-bold text-base flex items-center gap-2">
-                  <span className="material-symbols-outlined text-2xl">check_circle</span>
-                  Thank you! We'll be in touch soon.
+              {submitError && (
+                <div className="mb-8 bg-red-50 text-red-700 px-8 py-5 rounded-2xl font-bold text-base flex items-center gap-2">
+                  <span className="material-symbols-outlined text-2xl">error</span>
+                  {submitError}
                 </div>
               )}
 
               <form className="space-y-8" onSubmit={handleSubmit}>
+                {/* Honeypot — spam protection */}
+                <input type="text" name="botcheck" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">Your Name</label>
+                    <label htmlFor="contact-name" className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">Your Name</label>
                     <input
+                      id="contact-name"
                       name="name" value={formData.name} onChange={handleChange} required
                       className="w-full bg-surface-container-lowest border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-secondary/50 focus:outline-none placeholder:text-outline transition-all text-lg"
                       placeholder="e.g. Rahul Sharma" type="text"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">Phone Number</label>
+                    <label htmlFor="contact-phone" className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">Phone Number</label>
                     <input
+                      id="contact-phone"
                       name="phone" value={formData.phone} onChange={handleChange} required
                       className="w-full bg-surface-container-lowest border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-secondary/50 focus:outline-none placeholder:text-outline transition-all text-lg"
                       placeholder="+91" type="tel"
@@ -143,8 +208,9 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">Select Branch</label>
+                  <label htmlFor="contact-branch" className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">Select Branch</label>
                   <select
+                    id="contact-branch"
                     name="branch" value={formData.branch} onChange={handleChange}
                     className="w-full bg-surface-container-lowest border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-secondary/50 focus:outline-none transition-all text-lg text-on-surface appearance-none cursor-pointer"
                   >
@@ -153,8 +219,9 @@ export default function Contact() {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">How can we help?</label>
+                  <label htmlFor="contact-message" className="text-sm font-bold text-on-surface-variant uppercase ml-4 tracking-wider">How can we help?</label>
                   <textarea
+                    id="contact-message"
                     name="message" value={formData.message} onChange={handleChange}
                     className="w-full bg-surface-container-lowest border-none rounded-[2rem] px-8 py-6 focus:ring-2 focus:ring-secondary/50 focus:outline-none placeholder:text-outline transition-all resize-none text-lg"
                     placeholder="Describe your dental concern or preferred appointment date..."
@@ -163,9 +230,17 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="btn-primary w-full py-4 text-lg"
+                  disabled={isSubmitting}
+                  className="btn-primary w-full py-4 text-lg disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Enquiry
+                  {isSubmitting ? (
+                    <>
+                      <span className="material-symbols-outlined animate-spin">progress_activity</span>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Enquiry'
+                  )}
                 </button>
               </form>
             </div>

@@ -14,8 +14,10 @@ export default function GeneralDentistry() {
   return (
     <div className="pt-0">
       <SEO 
-        title="General Dentistry & Preventive Care" 
+        title="General Dentistry & Preventive Care · Smile Inn"
         description="Superior general dentistry at Smile Inn Dental Clinics. Expert cleanings, fillings, and digital diagnostics in Hyderabad, Nagole and Balapur."
+        keywords="general dentistry Hyderabad, dental checkup Nagole, teeth cleaning Balapur, root canal treatment Hyderabad"
+        canonicalPath="/treatments/general-dentistry"
       />
 
       {/* Hero */}
@@ -23,7 +25,7 @@ export default function GeneralDentistry() {
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop" 
-            alt="Dental Checkup" 
+            alt="General dental checkup procedure at Smile Inn Dental Clinics, Hyderabad" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -63,7 +65,7 @@ export default function GeneralDentistry() {
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop" 
-                alt="Dental Treatment" 
+                alt="Preventive dental treatment at Smile Inn Dental Clinics, Nagole branch, Hyderabad" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-10 right-10 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">

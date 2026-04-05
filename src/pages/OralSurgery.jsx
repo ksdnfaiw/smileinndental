@@ -14,8 +14,10 @@ export default function OralSurgery() {
   return (
     <div className="pt-0">
       <SEO 
-        title="Oral Surgery & Dental Implants Hyderabad | MDS Specialists" 
+        title="Oral Surgery & Dental Implants Hyderabad | MDS Specialists · Smile Inn"
         description="Precision Oral Surgery and Dental Implants by MDS Surgeon Dr. S. K. Nair at Smile Inn Dental Clinics. Safe, expert care in Nagole and Balapur, Hyderabad."
+        keywords="oral surgery Hyderabad, dental implants Nagole, wisdom tooth extraction Hyderabad, bone grafting Balapur, MDS surgeon Hyderabad"
+        canonicalPath="/treatments/oral-surgery"
       />
 
       {/* Hero */}
@@ -23,7 +25,7 @@ export default function OralSurgery() {
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
             src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" 
-            alt="Oral Surgery Studio" 
+            alt="Oral surgery operation theater at Smile Inn Dental Clinics, Hyderabad" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -60,7 +62,7 @@ export default function OralSurgery() {
           <div className="relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1598256989490-ef558ec39a5c?q=80&w=2070&auto=format&fit=crop" 
-                alt="Oral Surgeon Specialist" 
+                alt="Dr. S. K. Nair, MDS Oral Surgeon at Smile Inn Dental Clinics, Hyderabad" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-10 left-10 bg-white/90 backdrop-blur-md p-10 rounded-3xl shadow-xl max-w-xs hidden md:block">
@@ -108,7 +110,7 @@ export default function OralSurgery() {
             <div className="flex-1 w-full max-w-md aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
                 <img 
                     src="https://images.unsplash.com/photo-1598256991053-90d565256e29?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Dental Implants" 
+                    alt="Dental implant procedure at Smile Inn Dental Clinics, Hyderabad" 
                     className="w-full h-full object-cover"
                 />
             </div>
@@ -129,7 +131,7 @@ export default function OralSurgery() {
               Book Surgical Assessment
             </button>
             <button 
-              onClick={() => window.location.href = 'tel:+919876543210'}
+              onClick={() => window.location.href = 'tel:+919177317253'}
               className="px-10 py-6 border-2 border-outline-variant text-primary rounded-3xl font-bold text-xl hover:bg-surface-container transition-all duration-300 flex items-center gap-3"
             >
               <span className="material-symbols-outlined">call</span> Emergency Line

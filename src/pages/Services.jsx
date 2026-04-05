@@ -60,6 +60,12 @@ export default function Services() {
 
   return (
     <div className="pt-0">
+      <SEO
+        title="Dental Treatments in Hyderabad · Smile Inn"
+        description="Implants, cosmetic dentistry, orthodontics, root canal & more — all by specialist MDS doctors. Two clinics in Hyderabad."
+        keywords="dental treatments Hyderabad, dental implants, cosmetic dentistry Hyderabad, orthodontics Nagole, root canal Hyderabad"
+        canonicalPath="/services"
+      />
       {/* Hero */}
       <section className="relative bg-primary-container text-white overflow-hidden py-24 md:py-40">
         <div className="absolute inset-0 opacity-10">

@@ -38,8 +38,10 @@ export default function Treatments() {
   return (
     <div className="pt-0">
       <SEO 
-        title="Dental Treatments & Specialist Care" 
+        title="Dental Treatments & Specialist Care · Smile Inn"
         description="Explore comprehensive dental treatments at Smile Inn Dental Clinics. From Orthodontics to Oral Surgery, our MDS specialists provide expert care in Nagole and Balapur."
+        keywords="dental treatments Hyderabad, orthodontics Nagole, oral surgery Hyderabad, cosmetic dentistry, general dentistry Balapur"
+        canonicalPath="/treatments"
       />
 
       {/* Hero */}

@@ -7,6 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import BookAppointment from './pages/BookAppointment';
+import ThankYou from './pages/ThankYou';
 
 // New Treatment Pages
 import Treatments from './pages/Treatments';
@@ -39,6 +40,7 @@ function AnimatedRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<BookAppointment />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         
         {/* Treatment Routes */}
         <Route path="/treatments" element={<Treatments />} />

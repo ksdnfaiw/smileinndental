@@ -14,8 +14,10 @@ export default function Orthodontics() {
   return (
     <div className="pt-0">
       <SEO 
-        title="Best Orthodontist in Hyderabad | Invisalign & Braces" 
+        title="Best Orthodontist in Hyderabad | Invisalign & Braces · Smile Inn"
         description="Straighten your smile with MDS Orthodontist Dr. Arjun Reddy at Smile Inn Dental Clinics. Expert Invisalign and Braces treatment in Nagole and Balapur, Hyderabad."
+        keywords="orthodontist Hyderabad, Invisalign Nagole, braces Hyderabad, teeth alignment Balapur, clear aligners Hyderabad"
+        canonicalPath="/treatments/orthodontics"
       />
 
       {/* Hero */}
@@ -23,7 +25,7 @@ export default function Orthodontics() {
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
             src="https://images.unsplash.com/photo-1598256989490-ef558ec39a5c?q=80&w=2070&auto=format&fit=crop" 
-            alt="Orthodontic Treatment" 
+            alt="Orthodontic treatment with braces at Smile Inn Dental Clinics, Hyderabad" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -44,7 +46,7 @@ export default function Orthodontics() {
           <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop" 
-                alt="Orthodontist Dr. Arjun Reddy" 
+                alt="Dr. Arjun Reddy, MDS Orthodontist at Smile Inn Dental Clinics Hyderabad" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute -bottom-8 -right-8 bg-white p-10 rounded-2xl shadow-xl max-w-xs hidden md:block border-t-8 border-secondary">
@@ -100,7 +102,7 @@ export default function Orthodontics() {
             <div className="relative rounded-[3rem] overflow-hidden aspect-video shadow-2xl">
                 <img 
                     src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Invisalign Aligners" 
+                    alt="Invisalign clear aligners treatment at Smile Inn Dental Clinics, Hyderabad" 
                     className="w-full h-full object-cover"
                 />
             </div>
@@ -124,7 +126,7 @@ export default function Orthodontics() {
                       Book Free Assessment
                     </button>
                     <button 
-                      onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+                      onClick={() => window.open('https://wa.me/919177317253', '_blank')}
                       className="px-8 py-5 border-2 border-white/30 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
                     >
                       <span className="material-symbols-outlined">chat</span> WhatsApp Expert

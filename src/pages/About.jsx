@@ -46,6 +46,12 @@ export default function About() {
 
   return (
     <div className="pt-0">
+      <SEO
+        title="About Us · 10 Years of Specialist Dental Care · Smile Inn"
+        description="Meet the team behind Smile Inn — 5 MDS-qualified dentists serving Hyderabad for over 10 years with honest, advanced dental care."
+        keywords="about Smile Inn Dental, dentist Hyderabad, MDS dental specialists Hyderabad, best dental team Nagole"
+        canonicalPath="/about"
+      />
       {/* Hero */}
       <section className="min-h-[calc(100vh-80px)] flex flex-col md:flex-row overflow-hidden">
         <div className="w-full md:w-1/2 bg-primary-container flex items-center px-8 md:px-20 py-24 md:py-32">

@@ -14,8 +14,10 @@ export default function CosmeticDentistry() {
   return (
     <div className="pt-0">
       <SEO 
-        title="Cosmetic Dentist Hyderabad | Smile Makeovers & Veneers" 
+        title="Cosmetic Dentist Hyderabad | Smile Makeovers & Veneers · Smile Inn"
         description="Transform your smile with Smile Inn Dental Clinics. Aesthetic expert cosmetic dentistry including Porcelain Veneers and Professional Whitening in Nagole and Balapur."
+        keywords="cosmetic dentistry Hyderabad, teeth whitening Nagole, porcelain veneers Hyderabad, smile makeover Balapur"
+        canonicalPath="/treatments/cosmetic-dentistry"
       />
 
       {/* Hero */}
@@ -23,7 +25,7 @@ export default function CosmeticDentistry() {
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" 
-            alt="Cosmetic Dentistry" 
+            alt="Cosmetic dentistry treatment room at Smile Inn Dental Clinics, Hyderabad" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -62,7 +64,7 @@ export default function CosmeticDentistry() {
               <div className="rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl relative z-10">
                 <img 
                     src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Smile Transformation" 
+                    alt="Smile transformation result at Smile Inn cosmetic dentistry, Hyderabad" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>

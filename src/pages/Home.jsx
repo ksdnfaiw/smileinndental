@@ -19,6 +19,38 @@ function useScrollReveal() {
   }, []);
 }
 
+// FAQ Schema for Google Rich Results
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is dental treatment painful at Smile Inn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use modern pain management including topical anesthesia and dental lasers. Most patients are surprised by how comfortable treatment is. Your comfort comes first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you treat children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide child-friendly dental care from the first tooth and offer habit counselling. Our doctors are trained to work patiently with young patients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I visit a dentist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every 6 months for most patients. Those with active gum disease or orthodontic treatment may need more frequent visits."
+      }
+    }
+  ]
+};
+
 export default function Home() {
   const navigate = useNavigate();
   useScrollReveal();
@@ -49,11 +81,11 @@ export default function Home() {
   ];
 
   const faqs = [
-    { q: 'How can I book an emergency appointment?', a: 'You can call our dedicated emergency line or use the "Emergency" button on our website for instant priority scheduling.' },
-    { q: 'Do you accept insurance?', a: 'Yes, we work with several major dental insurance providers. Contact our help desk to verify your specific plan coverage.' },
+    { q: 'Is dental treatment painful at Smile Inn?', a: 'We use modern pain management including topical anesthesia and dental lasers. Most patients are surprised by how comfortable treatment is. Your comfort comes first.' },
+    { q: 'Do you treat children?', a: 'Yes. We provide child-friendly dental care from the first tooth and offer habit counselling. Our doctors are trained to work patiently with young patients.' },
+    { q: 'How often should I visit a dentist?', a: 'Every 6 months for most patients. Those with active gum disease or orthodontic treatment may need more frequent visits.' },
     { q: 'What is the average cost of dental implants?', a: 'Costs vary depending on the implant type and bone health. We provide a transparent, detailed quote after your 3D digital scan.' },
     { q: 'Are digital X-rays safer?', a: 'Yes, digital X-rays use up to 80% less radiation than traditional film X-rays and provide much clearer images for diagnosis.' },
-    { q: 'Is wisdom tooth removal painful?', a: 'With our advanced local anesthesia and sedation options, the procedure itself is painless. We also provide post-op care kits for comfort.' },
   ];
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -67,6 +99,14 @@ export default function Home() {
 
   return (
     <div className="pt-0 overflow-x-hidden">
+      <SEO
+        title="Best Dental Clinic in Nagole, Hyderabad · Smile Inn"
+        description="Specialist dental care by 5 MDS doctors in Nagole & Balapur. Painless, hygienic, transparent. Book your appointment today."
+        keywords="dental clinic Nagole, dentist Hyderabad, dental implants Hyderabad, teeth whitening Hyderabad, best dentist near me, dental clinic Balapur, cosmetic dentistry Hyderabad"
+        canonicalPath="/"
+        schemaMarkup={FAQ_SCHEMA}
+      />
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -89,13 +129,13 @@ export default function Home() {
                 <span className="material-symbols-outlined">calendar_today</span> Book Visit
               </button>
               <button 
-                onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+                onClick={() => window.open('https://wa.me/919177317253', '_blank')}
                 className="btn-secondary"
               >
                 <span className="material-symbols-outlined">chat</span> WhatsApp
               </button>
               <button 
-                onClick={() => window.location.href = 'tel:+919876543210'}
+                onClick={() => window.location.href = 'tel:+919177317253'}
                 className="p-4 border-2 border-outline-variant text-primary rounded-xl hover:bg-surface-container-low transition-all duration-300"
               >
                 <span className="material-symbols-outlined">call</span>
@@ -116,7 +156,7 @@ export default function Home() {
             <img
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKsv_FKV8m3ISGM1cmGKeYZqYfcZouSvgnCKiIZg8a4RHZwWE1NxkVljWmJ7quxfHdB-ixa1XsFUrnV0lmxcprM6VNaum7kI9LwUgA4AxmMGgI_HaTLJ3aPLJ6W9fZiSX-63fkt2hTL8EqedXI2YFEeWO74-J2mPGi1R6609ijxeLHSq85Aq6oxt1FbibSH8NtBZIJbfjaFXnxkoW-mMJcLN00uVkyZG-om1GwYLMlQJ_-bdMU9qIrLH-o7u3DhiC6y0jxwLlQVlo"
-              alt="Ultra-modern dental clinic lobby"
+              alt="Smile Inn Dental Clinic modern lobby interior, Nagole branch, Hyderabad"
             />
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary rounded-full blur-[80px] opacity-20"></div>
           </div>
@@ -197,7 +237,7 @@ export default function Home() {
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrCWPtHTKBNmmWxOtDY0bCuDYERGWJs9o1rYu8LKCenwDgfyOW0wLUWQZ_agtlgxkf2OEANw6dOv3J8KWCdG4f7iz_h4W5IXn7ico_BgqguGGqDvdPIKKgNkSqiO4mfw3OggZ3HFd0dISe9Shwh-AWgtqsDjDN6DvYhMhoga4rdkNv3IaPKdoN6wE_nRRTliZDYyM7OvzLlr-FMjKcosasUZalBi6SPJkDg8LezFdxpcAeK4QeTkAGK87U04-lPfNb-Xk8ZDyGAMw"
-                alt="Serene dental treatment room"
+                alt="Smile Inn Dental treatment room with modern dental chair and advanced equipment, Hyderabad"
               />
             </div>
             <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-lg shadow-xl max-w-xs hidden md:block">
@@ -249,7 +289,7 @@ export default function Home() {
               <div className={`w-20 h-20 ${inverted ? 'bg-primary-container' : 'bg-surface'} rounded-full shadow-lg flex items-center justify-center mb-6 border-4 border-background hover:scale-110 transition-transform duration-300`}>
                 <span className={`material-symbols-outlined ${inverted ? 'text-white' : 'text-primary'} text-3xl`}>{icon}</span>
               </div>
-              <h4 className="font-headline text-xl text-primary mb-2">{title}</h4>
+              <h3 className="font-headline text-xl text-primary mb-2">{title}</h3>
               <p className="text-sm text-on-surface-variant px-4">{desc}</p>
             </div>
           ))}
@@ -267,10 +307,10 @@ export default function Home() {
             {doctors.map(({ name, spec, img }) => (
               <div key={name} className="group cursor-pointer">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative">
-                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={img} alt={name} />
+                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={img} alt={`${name}, ${spec} at Smile Inn Dental Clinics Hyderabad`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h5 className="font-headline text-lg text-primary">{name}</h5>
+                <h3 className="font-headline text-lg text-primary">{name}</h3>
                 <p className="text-xs font-bold text-secondary tracking-widest uppercase">{spec}</p>
               </div>
             ))}
@@ -314,6 +354,7 @@ export default function Home() {
               <button
                 key={i}
                 onClick={() => setActiveTestimonial(i)}
+                aria-label={`View testimonial ${i + 1}`}
                 className={`w-3 h-3 rounded-full transition-all duration-500 ${activeTestimonial === i ? 'bg-secondary w-8' : 'bg-outline-variant'}`}
               ></button>
             ))}
@@ -345,24 +386,36 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {[
             {
-              name: 'Nagole Branch', addr: 'Main Road, Opposite Metro Station, Nagole, Hyderabad.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSyYAOcferJ27vIWTuj_SwMtqRFPDf0NCHcAQF509FP9DoAgLeL_4Kk586R_07k9rReQI3hZ7I6GDWVkANU6Csd0NhDpN_cQqBQaBJRxSYq6WhKKxm8fNBGuogVe2s0hat0KLUiTI-IxNwCHTU7YLhK1H2ApUlWTt1M5cHVmqTtTetr3tvSOxWYmzPxh8CMuey9-U8g3FME0fuPWmf1fjhuytFRbpk6e4ZmpcSoMFnkpN8cwUphHFT4g_PMqyv3G1xZ5FK8QJuW5E'
+              name: 'Nagole Branch', 
+              addr: 'Gurukrupa Building, 1st Floor, Alkapuri X Road, Nagole, Hyderabad - 500068.',
+              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSyYAOcferJ27vIWTuj_SwMtqRFPDf0NCHcAQF509FP9DoAgLeL_4Kk586R_07k9rReQI3hZ7I6GDWVkANU6Csd0NhDpN_cQqBQaBJRxSYq6WhKKxm8fNBGuogVe2s0hat0KLUiTI-IxNwCHTU7YLhK1H2ApUlWTt1M5cHVmqTtTetr3tvSOxWYmzPxh8CMuey9-U8g3FME0fuPWmf1fjhuytFRbpk6e4ZmpcSoMFnkpN8cwUphHFT4g_PMqyv3G1xZ5FK8QJuW5E',
+              mapUrl: 'https://maps.google.com/?q=Smile+Inn+Dental+Nagole'
             },
             {
-              name: 'Balapur Branch', addr: 'RCI Road, Adjacent to Axis Bank, Balapur, Hyderabad.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHFoLn_agtTmbJS-F_Z9qJa291kf_mI2IE92iVmxd3EkHk6OiqWmdThzRUI1vvZTIHrgbE-pgldIwlZ8KxTLcw6jjQPRkHLxu88DFklcNuPh4kmHNYwSyz3OHKrqofM1q99pQVi8oEOdLZWwPuth0KI5j0r7pObYjIW0GHDQPCSqC1VQJrrbFWSq2Pymzsw6mIRLuurLi6BbLV_vI7LQEBSl6zHG-pgvCt9xxhHkl-NpE4XcEIA4mBQV9MNu0x6lugl5A7bHfr1Ak'
+              name: 'Balapur Branch', 
+              addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur, Hyderabad - 500097.',
+              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHFoLn_agtTmbJS-F_Z9qJa291kf_mI2IE92iVmxd3EkHk6OiqWmdThzRUI1vvZTIHrgbE-pgldIwlZ8KxTLcw6jjQPRkHLxu88DFklcNuPh4kmHNYwSyz3OHKrqofM1q99pQVi8oEOdLZWwPuth0KI5j0r7pObYjIW0GHDQPCSqC1VQJrrbFWSq2Pymzsw6mIRLuurLi6BbLV_vI7LQEBSl6zHG-pgvCt9xxhHkl-NpE4XcEIA4mBQV9MNu0x6lugl5A7bHfr1Ak',
+              mapUrl: 'https://maps.google.com/?q=Sri+Amrutha+Laxmi+Dental+Balapur'
             },
-          ].map(({ name, addr, img }) => (
+          ].map(({ name, addr, img, mapUrl }) => (
             <div key={name} className="bg-surface-container-low rounded-xl overflow-hidden shadow-lg group">
               <div className="h-64 bg-slate-200 overflow-hidden">
-                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={img} alt={name} />
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={img} alt={`Smile Inn Dental Clinic exterior, ${name}, Hyderabad`} />
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-headline text-primary mb-2">{name}</h3>
                 <p className="text-sm text-on-surface-variant mb-6">{addr}</p>
                 <div className="flex gap-4">
-                  <button className="flex-1 bg-primary text-white py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">View on Maps</button>
-                  <button className="px-4 border-2 border-outline text-primary rounded-lg hover:bg-surface-container-low transition-colors">
+                  <button 
+                    onClick={() => window.open(mapUrl, '_blank')}
+                    className="flex-1 bg-primary text-white py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
+                  >
+                    View on Maps
+                  </button>
+                  <button 
+                    onClick={() => window.location.href = 'tel:+919177317253'}
+                    className="px-4 border-2 border-outline text-primary rounded-lg hover:bg-surface-container-low transition-colors"
+                  >
                     <span className="material-symbols-outlined">call</span>
                   </button>
                 </div>
