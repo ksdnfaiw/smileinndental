@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
+import logo from '../assets/logo-full.png';
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -8,7 +9,11 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
         {/* Brand */}
         <div className="space-y-6">
-          <div className="text-2xl font-serif text-white">Smile Inn Dental Clinics</div>
+          <img 
+            src={logo} 
+            alt="Smile Inn Dental Clinics Logo" 
+            className="h-10 w-auto object-contain brightness-0 invert"
+          />
           <p className="text-slate-200 text-lg leading-relaxed opacity-90">
             Redefining dental health through specialist-led artistry and advanced clinical protocols.
             Signature Specialist Care.

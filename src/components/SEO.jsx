@@ -18,7 +18,7 @@ const DENTIST_SCHEMA = {
   "@type": "Dentist",
   "name": "Smile Inn Dental Clinics",
   "url": SITE_URL,
-  "logo": `${SITE_URL}/logo.png`,
+  "logo": `${SITE_URL}/logo-full.png`,
   "description": "Specialist dental clinic in Hyderabad with 5 MDS doctors. Advanced dental treatments including implants, cosmetic dentistry, orthodontics and oral surgery.",
   "telephone": "+919177317253",
   "email": "smileinndentalclinics@gmail.com",

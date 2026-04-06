@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import logo from '../assets/logo-full.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,16 +23,20 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 shadow-md' : 'bg-white/80'
+        scrolled ? 'bg-primary shadow-lg' : 'bg-primary/95'
       } backdrop-blur-md`}
     >
       <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
         {/* Logo */}
         <NavLink
           to="/"
-          className="text-2xl font-serif italic text-indigo-900 font-medium tracking-tight hover:opacity-80 transition-opacity"
+          className="hover:opacity-80 transition-opacity"
         >
-          Smile Inn Dental Clinics
+          <img 
+            src={logo} 
+            alt="Smile Inn Dental Clinics Logo" 
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </NavLink>
 
         {/* Desktop Links */}
@@ -43,8 +48,8 @@ export default function Navbar() {
               end={to === '/'}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-indigo-900 font-bold border-b-2 border-lime-600 tracking-tight transition-all duration-300 text-lg'
-                  : 'text-slate-600 hover:text-indigo-900 font-medium tracking-tight transition-all duration-300 text-lg'
+                  ? 'text-white font-bold border-b-2 border-lime-500 tracking-tight transition-all duration-300 text-lg'
+                  : 'text-slate-200 hover:text-white font-medium tracking-tight transition-all duration-300 text-lg'
               }
             >
               {label}
@@ -55,14 +60,14 @@ export default function Navbar() {
         {/* CTA */}
         <button
           onClick={() => { navigate('/book'); setMenuOpen(false); }}
-          className="hidden md:block bg-primary-container text-white px-6 py-2.5 rounded-xl font-medium transition-all duration-300 hover:opacity-80 active:scale-95"
+          className="hidden md:block bg-lime-500 text-slate-950 px-6 py-2.5 rounded-xl font-bold transition-all duration-300 hover:bg-lime-400 active:scale-95 shadow-md hover:shadow-lg"
         >
           Book Appointment
         </button>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden p-2 text-primary"
+          className="md:hidden p-2 text-white"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -76,7 +81,7 @@ export default function Navbar() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        } bg-white/95 backdrop-blur-md`}
+        } bg-primary/95 backdrop-blur-md`}
       >
         <div className="px-6 pb-6 space-y-4 flex flex-col">
           {links.map(({ to, label }) => (
@@ -87,8 +92,8 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
                 isActive
-                  ? 'text-indigo-900 font-bold border-l-4 border-lime-600 pl-3 transition-all text-xl py-2'
-                  : 'text-slate-600 hover:text-indigo-900 pl-3 transition-all text-xl py-2'
+                  ? 'text-white font-bold border-l-4 border-lime-500 pl-3 transition-all text-xl py-2'
+                  : 'text-slate-200 hover:text-white pl-3 transition-all text-xl py-2'
               }
             >
               {label}
@@ -96,7 +101,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={() => { navigate('/book'); setMenuOpen(false); }}
-            className="btn-primary w-full text-center mt-4"
+            className="w-full bg-lime-500 text-slate-950 py-3 rounded-xl font-bold text-lg text-center mt-4 shadow-sm active:scale-95"
           >
             Book Appointment
           </button>
