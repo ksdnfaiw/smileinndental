@@ -1,14 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import SEO from '../components/SEO';
-
-export default function Services() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
-
 import { categories, colorMap } from '../data/servicesData';
 
 export default function Services() {

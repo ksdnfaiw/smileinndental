@@ -24,27 +24,9 @@ export default function Footer() {
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Follow Smile Inn on Instagram"
-              className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-lime-600 transition-colors cursor-pointer"
+              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-lime-600 transition-colors cursor-pointer"
             >
-              <span className="material-symbols-outlined text-sm">photo_camera</span>
-            </a>
-            <a 
-              href="https://www.facebook.com/smileinndentalclinics" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Follow Smile Inn on Facebook"
-              className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-lime-600 transition-colors cursor-pointer"
-            >
-              <span className="material-symbols-outlined text-sm">public</span>
-            </a>
-            <a 
-              href="https://wa.me/919177317253" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Chat with Smile Inn on WhatsApp"
-              className="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-lime-600 transition-colors cursor-pointer"
-            >
-              <span className="material-symbols-outlined text-sm">chat</span>
+              <span className="material-symbols-outlined text-lg">photo_camera</span>
             </a>
           </div>
         </div>
