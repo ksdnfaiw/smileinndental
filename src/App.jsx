@@ -14,6 +14,7 @@ import Treatments from './pages/Treatments';
 import GeneralDentistry from './pages/GeneralDentistry';
 import Orthodontics from './pages/Orthodontics';
 import CosmeticDentistry from './pages/CosmeticDentistry';
+import CategoryDetail from './pages/CategoryDetail';
 import OralSurgery from './pages/OralSurgery';
 
 function ScrollToTop() {
@@ -41,6 +42,7 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/book" element={<BookAppointment />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/services/:categorySlug" element={<CategoryDetail />} />
         
         {/* Treatment Routes */}
         <Route path="/treatments" element={<Treatments />} />

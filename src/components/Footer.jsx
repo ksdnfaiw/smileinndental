@@ -12,7 +12,7 @@ export default function Footer() {
           <img 
             src={logo} 
             alt="Smile Inn Dental Clinics Logo" 
-            className="h-10 w-auto object-contain brightness-0 invert"
+            className="h-10 w-auto object-contain"
           />
           <p className="text-slate-200 text-lg leading-relaxed opacity-90">
             Redefining dental health through specialist-led artistry and advanced clinical protocols.
@@ -20,7 +20,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <a 
-              href="https://www.instagram.com/smileinndentalclinics" 
+              href="https://www.instagram.com/smileinn.dentalclinic?igsh=bmQ4MHozd3F0b2Rk&utm_source=qr" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Follow Smile Inn on Instagram"
@@ -66,8 +66,8 @@ export default function Footer() {
             <li><NavLink to="/contact" className="hover:text-lime-400 transition-colors text-base">Nagole Branch</NavLink></li>
             <li><NavLink to="/contact" className="hover:text-lime-400 transition-colors text-base">Balapur Branch</NavLink></li>
             <li><NavLink to="/about" className="hover:text-lime-400 transition-colors text-base">About Us</NavLink></li>
-            <li><a href="tel:+919177317253" className="hover:text-lime-400 transition-colors text-base">📞 +91 91773 17253</a></li>
-            <li><a href="mailto:smileinndentalclinics@gmail.com" className="hover:text-lime-400 transition-colors text-base">✉️ Email Us</a></li>
+            <li><a href="tel:+919177317253" className="hover:text-lime-400 transition-colors text-base">+91 91773 17253</a></li>
+            <li><a href="mailto:smileinndentalclinics@gmail.com" className="hover:text-lime-400 transition-colors text-base">Email Us</a></li>
           </ul>
         </div>
 

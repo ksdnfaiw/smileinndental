@@ -73,12 +73,107 @@ export default function Home() {
   ];
 
   const testimonials = [
-    { q: 'The most comfortable extraction I\'ve ever had. Dr. Nair is truly a master of his craft. Nagole branch is fantastic!', name: 'Prasad Rao', loc: 'Nagole Branch Patient', inverted: false },
-    { q: 'My daughter actually looks forward to her dentist visits now. Dr. Meera is so patient and gentle. Best pediatric care in the city.', name: 'Shalini V.', loc: 'Balapur Branch Patient', inverted: true },
-    { q: 'Got my aligners from Smile Inn. The digital planning was mind-blowing and the results are better than I expected!', name: 'Aditya G.', loc: 'Nagole Branch Patient', inverted: false },
-    { q: 'Exceptional service and clinical care. The Nagole branch is equipped with the latest tech and the staff is very professional.', name: 'Vikram S.', loc: 'Nagole Branch Patient', inverted: true },
-    { q: 'Painless treatment and very clear explanation by the doctors. Highly impressed with the hygiene standards at Smile Inn.', name: 'Sneha K.', loc: 'Balapur Branch Patient', inverted: false },
+    { 
+      name: 'K Ravindra', 
+      q: 'I recently visited this dental clinic for an RCT treatment, and my experience was very positive. The doctor clearly explained the entire procedure step by step, which made me feel comfortable and confident. The doctor who treated me is highly knowledgeable and very patient. In my case, there were calcium blocks formed in the roots, but the doctor handled the RCT with great care and precision while explaining everything throughout the process. They also suggested the best cap based on my teeth structure after the RCT, which I really appreciated. The entire treatment was completed smoothly within 2–3 weeks. The pricing is reasonable and similar to other clinics, but the quality of care and attention given here truly stands out. Highly recommended!', 
+      loc: '3 weeks ago', 
+      inverted: false 
+    },
+    { 
+      name: 'Gayathri Prasad', 
+      q: 'Excellent clinic with highly professional doctors. My treatment was completely painless and the staff was very supportive throughout the process. Highly recommend Smile Inn for any dental procedures.', 
+      loc: '3 weeks ago', 
+      inverted: true 
+    },
+    { 
+      name: 'Deepender Dubey', 
+      q: 'I had a truly excellent experience at this dental clinic. The entire team was incredibly professional, patient, and transparent throughout the treatment process. They took the time to carefully guide us through every step, clearly explaining the available options and what to expect. What I appreciated the most was their honesty and integrity. Instead of suggesting unnecessary procedures, they genuinely focused on what was actually needed for the best long-term outcome. That level of trust and patient-first approach is rare and very reassuring. The staff was welcoming, the doctors were knowledgeable, and the overall experience felt thoughtful and personalized. I\'m grateful for their guidance and highly recommend this clinic to anyone looking for trustworthy and skilled dental care.', 
+      loc: '4 weeks ago', 
+      inverted: false 
+    },
+    { 
+      name: 'radha bodapati', 
+      q: 'I got root canal done from Dr Deedeepya Adapa. Initially I was very fearful, but doctor handled it very well and provided me with completely painless treatment, very knowledgeable about the situation of my teeth. Best clinic for dental problems.', 
+      loc: '6 weeks ago', 
+      inverted: true 
+    },
+    { 
+      name: 'Nikhil', 
+      q: 'Excellent service. Friendly doctor, clean clinic, and painless treatment. Highly recommended.', 
+      loc: '13 weeks ago', 
+      inverted: false 
+    },
+    { 
+      name: 'vaishnavi surampally', 
+      q: 'Thanks to Smile inn Dental Clinics. I have had a brace. The professionalism, the attention to detail, the friendliness.', 
+      loc: '13 weeks ago', 
+      inverted: true 
+    },
+    { 
+      name: 'nikhitha mogilicharla', 
+      q: 'I had a fantastic experience at Smile inn. The staff and doctors very friendly and professional. Dr. Chandrakanth.', 
+      loc: '13 weeks ago', 
+      inverted: false 
+    },
+    { 
+      name: 'Pambi Dinesh', 
+      q: 'Had an amazing experience, team was super friendly and made me feel at ease. The treatment was pain-free and exactly.', 
+      loc: '13 weeks ago', 
+      inverted: true 
+    },
+    { 
+      name: 'Anvitha Nagabelli', 
+      q: 'Excellent dental clinic with friendly and professional staff. They really care about patient comfort, and the clinic is clean and well organized. A great place for both adults and kids.', 
+      loc: '13 weeks ago', 
+      inverted: false 
+    },
+    { 
+      name: 'Harshith Mateti', 
+      q: 'I had a comfortable experience at Smile Inn Dental Clinic. The doctor explained the procedure clearly, and the staff.', 
+      loc: '13 weeks ago', 
+      inverted: true 
+    }
   ];
+
+  function ReviewToggle({ text, inverted }) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const limit = 120;
+    const isLong = text.length > limit;
+
+    return (
+      <div className={`mb-12 ${isLong ? 'cursor-default' : ''}`}>
+        {!isExpanded ? (
+          <>
+            <span className={`text-2xl md:text-4xl leading-tight font-serif ${inverted ? 'text-white' : 'text-primary'}`}>
+              {isLong ? `${text.substring(0, limit)}... ` : text}
+            </span>
+            {isLong && (
+              <button 
+                onClick={() => setIsExpanded(true)}
+                className="text-blue-500 hover:text-blue-400 font-bold text-sm md:text-base ml-2 bg-transparent border-none p-0 cursor-pointer underline decoration-2 underline-offset-4 transition-colors"
+                aria-label="Read more"
+              >
+                Read more
+              </button>
+            )}
+          </>
+        ) : (
+          <>
+            <span className={`text-2xl md:text-4xl leading-tight font-serif ${inverted ? 'text-white' : 'text-primary'}`}>
+              {text} 
+            </span>
+            <button 
+              onClick={() => setIsExpanded(false)}
+              className="text-blue-500 hover:text-blue-400 font-bold text-sm md:text-base ml-2 bg-transparent border-none p-0 cursor-pointer underline decoration-2 underline-offset-4 transition-colors"
+              aria-label="Show less"
+            >
+              Show less
+            </button>
+          </>
+        )}
+      </div>
+    );
+  }
 
   const faqs = [
     { q: 'Is dental treatment painful at Smile Inn?', a: 'We use modern pain management including topical anesthesia and dental lasers. Most patients are surprised by how comfortable treatment is. Your comfort comes first.' },
@@ -333,7 +428,7 @@ export default function Home() {
               <div key={idx} className="w-full flex-shrink-0 px-4">
                 <div className={`p-12 md:p-20 rounded-[3rem] shadow-sm italic text-center max-w-4xl mx-auto ${inverted ? 'bg-primary-container shadow-2xl shadow-primary/20' : 'bg-surface border border-outline-variant/10'}`}>
                   <div className={`text-6xl mb-8 ${inverted ? 'text-secondary-container opacity-50' : 'text-secondary opacity-30 font-serif'}`}>"</div>
-                  <p className={`text-2xl md:text-4xl leading-tight mb-12 font-serif ${inverted ? 'text-white' : 'text-primary'}`}>{q}</p>
+                  <ReviewToggle text={q} inverted={inverted} />
                   <div className="flex flex-col items-center gap-4 not-italic">
                     <div className={`w-16 h-16 rounded-full border-2 ${inverted ? 'border-secondary/30 bg-white/10' : 'border-primary/10 bg-primary/5'} flex items-center justify-center`}>
                       <span className={`material-symbols-outlined text-3xl ${inverted ? 'text-secondary' : 'text-primary'}`}>person</span>

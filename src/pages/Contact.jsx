@@ -22,7 +22,7 @@ export default function Contact() {
     try {
       const payload = new FormData();
       payload.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY');
-      payload.append('subject', `📩 New Enquiry — ${formData.name} — ${formData.branch}`);
+      payload.append('subject', `New Enquiry — ${formData.name} — ${formData.branch}`);
       payload.append('from_name', 'Smile Inn Website — Contact');
       payload.append('botcheck', ''); // honeypot
 

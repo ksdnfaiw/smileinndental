@@ -24,7 +24,7 @@ export default function BookAppointment() {
     try {
       const payload = new FormData();
       payload.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY');
-      payload.append('subject', `🦷 New Appointment Request — ${formData.name} — ${formData.branch}`);
+      payload.append('subject', `New Appointment Request — ${formData.name} — ${formData.branch}`);
       payload.append('from_name', 'Smile Inn Website');
       payload.append('botcheck', ''); // honeypot
       
