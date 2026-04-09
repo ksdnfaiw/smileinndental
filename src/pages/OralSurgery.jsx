@@ -46,8 +46,8 @@ export default function OralSurgery() {
           <div className="space-y-10">
             <h2 className="text-4xl md:text-6xl font-headline text-primary leading-tight italic">Surgery with <br />a Gentle Touch.</h2>
             <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
-                Oral Surgery at Smile Inn is led by <strong>Dr. S. K. Nair (MDS)</strong>, one of Hyderabad\'s premier oral and maxillofacial surgeons. 
-                Whether it\'s an emergency wisdom tooth extraction or a complex full-arch implant reconstruction, our procedures are defined by meticulous planning and a focus on rapid, pain-free recovery.
+                Oral Surgery at Smile Inn is led by <strong>Dr. Ch. Shivakanth (MDS)</strong>, one of Hyderabad's premier oral and maxillofacial surgeons. 
+                Whether it's an emergency wisdom tooth extraction or a complex full-arch implant reconstruction, our procedures are defined by meticulous planning and a focus on rapid, pain-free recovery.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {surgeries.map(s => (
@@ -66,7 +66,7 @@ export default function OralSurgery() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-10 left-10 bg-white/90 backdrop-blur-md p-10 rounded-3xl shadow-xl max-w-xs hidden md:block">
-                <h4 className="text-2xl font-headline text-primary mb-2">Dr. S. K. Nair</h4>
+                <h4 className="text-2xl font-headline text-primary mb-2">Dr. Ch. Shivakanth</h4>
                 <p className="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-4">MDS | Oral Surgery</p>
                 <p className="text-sm italic text-on-surface-variant opacity-80 leading-relaxed">
                   "Precision in the clinic, peace of mind for the patient. We use the latest 3D imaging for 100% surgical accuracy."

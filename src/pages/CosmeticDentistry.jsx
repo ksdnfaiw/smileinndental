@@ -45,7 +45,7 @@ export default function CosmeticDentistry() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-6xl font-headline text-primary">Smile Artistry.</h2>
             <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
-              At Smile Inn, cosmetic dentistry is more than just a procedure—it's a transformation. Led by **Dr. Kavya P. (MDS)**, our aesthetic studio specializes in creating balanced, natural-looking smiles that enhance your facial features. 
+              At Smile Inn, cosmetic dentistry is more than just a procedure—it's a transformation. Led by **Dr. Sravani (MDS)**, our aesthetic studio specializes in creating balanced, natural-looking smiles that enhance your facial features. 
               We combine the latest porcelain materials with digital mapping technology to ensure 100% predictability in your smile journey.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
@@ -70,7 +70,7 @@ export default function CosmeticDentistry() {
               </div>
               <div className="absolute -bottom-10 -right-10 bg-secondary p-12 rounded-[3rem] shadow-xl max-w-xs hidden md:block z-20">
                 <p className="text-3xl font-headline text-white italic">"A smile is the most powerful accessory you can ever wear."</p>
-                <p className="text-xs text-white/70 mt-6 tracking-widest font-bold uppercase">— Dr. Kavya P.</p>
+                <p className="text-xs text-white/70 mt-6 tracking-widest font-bold uppercase">— Dr. Sravani</p>
               </div>
           </div>
         </div>

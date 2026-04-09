@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { doctorsData } from '../data/doctorsData';
 
 /**
  * SEO Component for Smile Inn Dental Clinics
@@ -8,7 +9,7 @@ import { useEffect } from 'react';
 
 const SITE_URL = 'https://www.smileinndentalclinics.com';
 const BRAND_NAME = 'Smile Inn Dental Clinics';
-const DEFAULT_DESC = 'Smile Inn Dental Clinics — specialist dental care by 5 MDS doctors in Nagole & Balapur, Hyderabad. Painless treatments, advanced technology, transparent pricing. Book today.';
+const DEFAULT_DESC = `Smile Inn Dental Clinics — specialist dental care by ${doctorsData.length} MDS doctors in Nagole & Balapur, Hyderabad. Painless treatments, advanced technology, transparent pricing. Book today.`;
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og/home.jpg`;
 const THEME_COLOR = '#312b80';
 
@@ -19,7 +20,7 @@ const DENTIST_SCHEMA = {
   "name": "Smile Inn Dental Clinics",
   "url": SITE_URL,
   "logo": `${SITE_URL}/logo-full.png`,
-  "description": "Specialist dental clinic in Hyderabad with 5 MDS doctors. Advanced dental treatments including implants, cosmetic dentistry, orthodontics and oral surgery.",
+  "description": `Specialist dental clinic in Hyderabad with ${doctorsData.length} MDS doctors. Advanced dental treatments including implants, cosmetic dentistry, orthodontics and oral surgery.`,
   "telephone": "+919177317253",
   "email": "smileinndentalclinics@gmail.com",
   "priceRange": "₹₹",

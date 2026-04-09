@@ -16,6 +16,7 @@ import Orthodontics from './pages/Orthodontics';
 import CosmeticDentistry from './pages/CosmeticDentistry';
 import CategoryDetail from './pages/CategoryDetail';
 import OralSurgery from './pages/OralSurgery';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -51,7 +52,7 @@ function AnimatedRoutes() {
         <Route path="/treatments/cosmetic-dentistry" element={<CosmeticDentistry />} />
         <Route path="/treatments/oral-surgery" element={<OralSurgery />} />
 
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -70,7 +70,7 @@ export default function GeneralDentistry() {
               />
               <div className="absolute top-10 right-10 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
                 <p className="text-sm font-bold text-primary italic">"Our goal is to make visits so comfortable that you'll actually look forward to your bi-annual checkups."</p>
-                <p className="text-xs text-secondary mt-2 tracking-widest font-bold uppercase">— Dr. Kavya P.</p>
+                <p className="text-xs text-secondary mt-2 tracking-widest font-bold uppercase">— Specialist Clinicians</p>
               </div>
           </div>
         </div>

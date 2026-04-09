@@ -15,7 +15,7 @@ export default function Orthodontics() {
     <div className="pt-0">
       <SEO 
         title="Best Orthodontist in Hyderabad | Invisalign & Braces · Smile Inn"
-        description="Straighten your smile with MDS Orthodontist Dr. Arjun Reddy at Smile Inn Dental Clinics. Expert Invisalign and Braces treatment in Nagole and Balapur, Hyderabad."
+        description="Straighten your smile with MDS Orthodontists at Smile Inn Dental Clinics. Expert Invisalign and Braces treatment in Nagole and Balapur, Hyderabad."
         keywords="orthodontist Hyderabad, Invisalign Nagole, braces Hyderabad, teeth alignment Balapur, clear aligners Hyderabad"
         canonicalPath="/treatments/orthodontics"
       />
@@ -50,7 +50,7 @@ export default function Orthodontics() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute -bottom-8 -right-8 bg-white p-10 rounded-2xl shadow-xl max-w-xs hidden md:block border-t-8 border-secondary">
-                <h4 className="text-2xl font-headline text-primary mb-2">Dr. Arjun Reddy</h4>
+                <h4 className="text-2xl font-headline text-primary mb-2">Specialist Team</h4>
                 <p className="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-4">MDS | Orthodontics</p>
                 <p className="text-sm italic text-on-surface-variant opacity-80 leading-relaxed">
                   "Every alignment is a unique puzzle. We combine biomechanical precision with artistic vision."
@@ -60,7 +60,7 @@ export default function Orthodontics() {
           <div className="space-y-10">
             <h2 className="text-4xl md:text-6xl font-headline text-primary leading-tight">Symmetry Meets <br />Functionality.</h2>
             <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
-                Orthodontics at Smile Inn is led by <strong>Dr. Arjun Reddy (MDS)</strong>. Unlike general practitioners, an MDS Orthodontist has three additional years of specialized training in tooth movement and facial development. 
+                Orthodontics at Smile Inn is led by our <strong>MDS Orthodontic Specialists</strong>. Unlike general practitioners, our specialists have three additional years of specialized training in tooth movement and facial development. 
                 Whether you prefer the invisibility of modern aligners or the precision of specialized braces, we ensure a perfect final outcome.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
