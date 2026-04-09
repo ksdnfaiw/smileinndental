@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { doctorsData } from '../data/doctorsData';
 
 function useScrollReveal() {
   useEffect(() => {
@@ -64,13 +65,7 @@ export default function Home() {
     { icon: 'family_restroom', title: 'Pediatric Care', desc: 'Specialized, gentle dental care designed to build a positive lifelong habit for children.', hoverColor: 'hover:bg-secondary hover:text-white' },
   ];
 
-  const doctors = [
-    { name: 'Dr. Arjun Reddy', spec: 'MDS | Orthodontics', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBmxvvjkf0cMw6TpaFdRAjqtUFJHvT3el33eKLGTVE5x64ScrrmbnNoD_3Q76xuqdej97vhIAtjN8HmzxqZWLnciTTMQMUjDG0c_Ak7RoCx95ypUG0s-caeL743bQJfMI35Ll0GFx148DM2ZRaNqT_cNu82Gi2ovQwqZyv0G9UKSOJvDJJVZJwcPobqZXNa-aR1nAP-7brgJU9q_4XyJBeDDMuoVWFrAvmHaQgltN_arxvaXpmXOnYKytuC-Uu2tHmXknQBccYzZck' },
-    { name: 'Dr. Kavya P.', spec: 'MDS | Prosthodontics', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCF8HpHRxriVT882gGF7JT9Jz8Ej3a1VejBPunnHyarHHeFcZq8x7DB_ndt03lDfRQY18IALozaOm5JYQhwzm_Doh6BKLrupV_ieVm_FN2TwG2c8hVDaIhzDqBwSZsLc8jcqBm9yhnm01UtptVtjbteUmAlLZh5RgRdQcjjxjF1prE_uGplYXT_Hm-joFCknpgL7bIgg1nLLlA2AjhMW7C2KgO5zUI6AX9wtObMyfHKMMVlLAivRdY0HHiTbV4accFM41jaOGoBX8Y' },
-    { name: 'Dr. S. K. Nair', spec: 'MDS | Oral Surgery', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBoITTzIMb9jWDeIUfmpqhFfnIUuxlGIGJAUHSKntDlKGc2CPuiUZ-jF8Ou_UrFit9R-F334uutA6aqGcq8a21ruNrk3qBKe7bjyBx8FidaLqvke4DnxICbCmW3WphRv7wkCO99p2yVrz_pGGRiRMwG3lzMJdHOHLJdNP6oCBdGLHcVF0uPBFPOuroo0YMItnZlACR_2Nv0r4OINCqmjNvD6-gdJifoTmws56oqE7930VEisFCi-wicyD0uJu_LtP9ZcdHVIjJjUhI' },
-    { name: 'Dr. Meera Shah', spec: 'MDS | Pedodontics', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCXcwoemmWGGcqvHvd3aFUguKfR5jaxZnOBtCKI_t_C-tBfizcR3MaD-IieJNnHGQvSijoO1rW-5jAk75FBTnNdki3u4E1Blb7Ag1q7_ZOucdhmsxtINuf5iL7uua3J9bBGtHT_-cL2gb1AuiYukrAIGNXg1tSOngs_AKD4JqZ4yPXBvueuxuquBSeJsktBrPl4muFD_D15dcmXTEyWY2b-mBB5Y39vuVWWvfuzq1PfGDbsoADO0GIRGz7Ce6u5jdNPgr6fv_YwrEQ' },
-    { name: 'Dr. Rahul Verma', spec: 'MDS | Periodontics', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLwto6t1uA_8WOlckL33-ZMfOoHZDZanAb7B6RxMLXe5IuazquudgOKh6rOFfYJQ_I8H9gdUH-zgnGZXNa6hR6dnOinmjon2ezUq_szc1-YOEj1_93kcYOcm-sAadz8MKm2BTzEmfNmPwuYfF66O7ax4gbsp-ME2zpiNIcd8Y6VI9CF4xCk5SUJb2b8NxW0dw-EbEjpDe2IgR-xovcecTicshk7qLkD0tyD7g4VqsnKEGOJD95dj-Dmk6BuaUlaM6rdaya8-ZtAGw' },
-  ];
+  const doctors = doctorsData;
 
   const testimonials = [
     { 
@@ -196,7 +191,7 @@ export default function Home() {
     <div className="pt-0 overflow-x-hidden">
       <SEO
         title="Best Dental Clinic in Nagole, Hyderabad · Smile Inn"
-        description="Specialist dental care by 5 MDS doctors in Nagole & Balapur. Painless, hygienic, transparent. Book your appointment today."
+        description={`Specialist dental care by ${doctorsData.length} MDS doctors in Nagole & Balapur. Painless, hygienic, transparent. Book your appointment today.`}
         keywords="dental clinic Nagole, dentist Hyderabad, dental implants Hyderabad, teeth whitening Hyderabad, best dentist near me, dental clinic Balapur, cosmetic dentistry Hyderabad"
         canonicalPath="/"
         schemaMarkup={FAQ_SCHEMA}
@@ -237,7 +232,7 @@ export default function Home() {
               </button>
             </div>
             <div className="grid grid-cols-3 gap-8 pt-4">
-              {[['10+', 'Years'], ['5 MDS', 'Specialists'], ['2', 'Locations']].map(([num, label]) => (
+              {[['10+', 'Years'], [`${doctorsData.length} MDS`, 'Specialists'], ['2', 'Locations']].map(([num, label]) => (
                 <div key={label}>
                   <div className="text-3xl font-headline text-secondary">{num}</div>
                   <div className="text-xs uppercase tracking-wider font-bold text-outline mt-1">{label}</div>
@@ -399,14 +394,14 @@ export default function Home() {
             <h2 className="text-4xl font-headline text-primary mt-2">Led by Master Clinicians</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {doctors.map(({ name, spec, img }) => (
+            {doctors.map(({ name, role, img }) => (
               <div key={name} className="group cursor-pointer">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative">
-                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={img} alt={`${name}, ${spec} at Smile Inn Dental Clinics Hyderabad`} />
+                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={img} alt={`${name}, ${role} at Smile Inn Dental Clinics Hyderabad`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <h3 className="font-headline text-lg text-primary">{name}</h3>
-                <p className="text-xs font-bold text-secondary tracking-widest uppercase">{spec}</p>
+                <p className="text-xs font-bold text-secondary tracking-widest uppercase">{role}</p>
               </div>
             ))}
           </div>

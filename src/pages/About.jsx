@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import SEO from '../components/SEO';
+import { doctorsData } from '../data/doctorsData';
 
 export default function About() {
   const navigate = useNavigate();
@@ -9,33 +10,7 @@ export default function About() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  const doctors = [
-    {
-      name: 'Dr. Shivakanth', role: 'Chief Prosthodontist', badge: 'Founder',
-      desc: 'Specializing in complex restorative procedures and smile architectural design with over 12 years of clinical excellence.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAysCZc6SaW8EditLR93iRa9o6LXBH-QJadEK-HFUYWYUuO6S8CNLvpcbgwYfacLQtBWHqgU5aOnGE7dm3nOYVO_BiwWQYqFwevqZ4KHABVUtW8ihGmmhsEfRWM7rYSJ85ExAQ5C_DIVMghkC3SQUko_FLQvr7p4XtP3cDSMTXxJI23-by6tQJpLblJtU9X2v0p1xZYdw_uoIDpaC6dMjg7fXbWcWeyjcYO1JUp7TnD6v-hgDJw_2ax2faApzLhj7LCsp8Cbv-oW-Y'
-    },
-    {
-      name: 'Dr. Madhuri', role: 'Orthodontist', badge: null,
-      desc: 'Expert in invisible aligners and pediatric orthodontics, focusing on creating perfectly balanced facial aesthetics.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC06z1ri33-zRbddbba5qhPmSjF7wetC6gaENbJhG2TO4SZVmiK3SqK-5OMSHv5v9HIb27C2pO7-ptQ1FPiqyuB5X4fprDYiBlTFFDWCwkYcnZb_zYqY9QKwwmg_-6N5aP4CEfIFZrhn93uDKswpfUUajZjlMg_THJR1zhn-D5CNFwYv-XbgoqWza3Cp-Vp432GtYNq6ZFUS_8FZ5QsTb8JZBKMXRqoo8tuZ-3_WbFzaKpCxyrRHByRWUFf-_Ta_ggp-hLN-zlHCwA'
-    },
-    {
-      name: 'Dr. Chandrakanth', role: 'Oral Surgeon', badge: null,
-      desc: 'Specialized in maxillofacial surgeries and advanced dental implants, prioritizing minimally invasive techniques.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHLL-Cs_F_4Ol-mFwZ5iTE7gNNqJ38ZN7co1ckLkXUUt8ODozDUfMUIjWz-73WC8kHXc59YgjYQ4HAi_9AHx64MnuTV6Bzkaz4xELlEgsOnqytqBQwN9w5Zzq8CXwxSITvDRkFxjdHV7FLrsBICTk6w6-l0UyjVhl85P21U8q0SGbL55JOYYKGLbV9YZtYXaYF7Em410es7ZpztjgrVcVHGYnf053ZWn7CKLwQZWztxL_OGtrOlTI68rsFynKHfuSjnmsgoMkmUsQ'
-    },
-    {
-      name: 'Dr. Salma', role: 'Endodontist', badge: null,
-      desc: 'Master of precision root canal therapies and microscopic dentistry, ensuring pain-free preservation of natural teeth.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB4gl1iYXHp_22vrFm-pEd2YRLd3hCdDNBPfBPbkpGPLjt2cbCo620vGDhs2lP1xJmRbfgkhghKx5u4uxrP_XgwANDSy7JkLBygd9WbxuhhOVe88mux1vo3trZgu3MXMoKWfLBt0PXEeeMjehQpr60wNI1ZRkfrG2A8ARiY6bhz-lfK1sfKFhYtq3lT0o9DLXZ4ueKdLwH6vSP0V9X0N8a_B_eG6TcvJfjkQ-JWqwvT32Hu0YH0HVfY94p2FnhRd2hNjFh-YklYHfM'
-    },
-    {
-      name: 'Dr. Sravani', role: 'Cosmetic Dentist', badge: null,
-      desc: 'Dedicated to aesthetic veneers and full-mouth rehabilitation, blending artistry with clinical health.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVFRYC5Ve9tUG_HgAczANX1QmnGzP-M1DUGf_m-zEkV4djRcpvtUpPDcfxtu3MZXW6H25J5F1ap7He3xPT3WcCQX6Jpi_3o_SluzJRAjXILMzbAeIJDNSo1-O3w6ynZEGTW1e1HQtG4-aX4JTdHRbDzscNTufxUaCngvpy5mckpSRrdSf6ihOfvvRO6LeyUy5uKOpv5mzk03mms_JhRRyEd60BTGelll8V9r3WLQcgDul8aHVffaOfOOspxR-y_d3HaPKST7pcqrY'
-    },
-  ];
+  const doctors = doctorsData;
 
   const values = [
     { icon: 'verified_user', title: 'Absolute Integrity', desc: 'Transparent pricing and honest treatment plans are the bedrock of our practice.' },
@@ -128,7 +103,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <span className="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Our Team</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary">5 Specialists. One Mission.</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary">{doctorsData.length} Specialists. One Mission.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {doctors.map(({ name, role, badge, desc, img }) => (
