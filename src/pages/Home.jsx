@@ -174,11 +174,33 @@ export default function Home() {
     const hasSeenPopup = sessionStorage.getItem('hasSeenPopup');
     if (!hasSeenPopup) {
       const popupTimer = setTimeout(() => {
-        setShowPopup(true);
+        // Only show if user is still in the Hero section (top of the page)
+        if (window.scrollY < 500) {
+          setShowPopup(true);
+          // Auto-close after 3 seconds as requested
+          setTimeout(() => {
+            setShowPopup(false);
+            sessionStorage.setItem('hasSeenPopup', 'true');
+          }, 3000);
+        }
       }, 5000);
       return () => clearTimeout(popupTimer);
     }
   }, []);
+
+  // Close popup if user scrolls away from Hero section
+  useEffect(() => {
+    if (showPopup) {
+      const handleScroll = () => {
+        if (window.scrollY > 500) {
+          setShowPopup(false);
+          sessionStorage.setItem('hasSeenPopup', 'true');
+        }
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [showPopup]);
 
   const closePopup = () => {
     setShowPopup(false);
@@ -603,23 +625,23 @@ export default function Home() {
               <span className="material-symbols-outlined text-2xl font-bold">close</span>
             </button>
             
-            <div className="p-8 md:p-12 text-center">
-              <div className="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-3xl flex items-center justify-center mx-auto mb-8 rotate-3 group-hover:rotate-0 transition-transform">
-                <span className="material-symbols-outlined text-4xl">calendar_month</span>
+            <div className="p-6 md:p-12 text-center">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-secondary-container text-on-secondary-container rounded-3xl flex items-center justify-center mx-auto mb-6 md:mb-8 rotate-3 group-hover:rotate-0 transition-transform">
+                <span className="material-symbols-outlined text-3xl md:text-4xl">calendar_month</span>
               </div>
               
-              <h3 className="text-3xl md:text-4xl font-headline text-primary mb-4">Book Your Appointment</h3>
-              <p className="text-on-surface-variant text-base mb-10 leading-relaxed">
-                Experience expert clinical dentistry that is easy and relaxing. Fill in your details below to get started.
+              <h3 className="text-2xl md:text-4xl font-headline text-primary mb-3 md:mb-4 px-2">Book Your Appointment</h3>
+              <p className="text-on-surface-variant text-sm md:text-base mb-8 md:mb-10 leading-relaxed px-4">
+                Experience expert clinical dentistry that is easy and relaxing.
               </p>
               
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); navigate('/book'); }}>
+              <form className="space-y-4 px-2 md:px-0" onSubmit={(e) => { e.preventDefault(); navigate('/book'); }}>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-xl">person</span>
                   <input 
                     type="text" 
                     required 
-                    className="w-full border border-outline-variant rounded-2xl pl-12 pr-4 py-4 text-base focus:ring-2 focus:ring-secondary focus:outline-none bg-surface transition-all" 
+                    className="w-full border border-outline-variant rounded-2xl pl-12 pr-4 py-3.5 md:py-4 text-base focus:ring-2 focus:ring-secondary focus:outline-none bg-surface transition-all" 
                     placeholder="Your Full Name" 
                   />
                 </div>
@@ -628,20 +650,20 @@ export default function Home() {
                   <input 
                     type="tel" 
                     required 
-                    className="w-full border border-outline-variant rounded-2xl pl-12 pr-4 py-4 text-base focus:ring-2 focus:ring-secondary focus:outline-none bg-surface transition-all" 
+                    className="w-full border border-outline-variant rounded-2xl pl-12 pr-4 py-3.5 md:py-4 text-base focus:ring-2 focus:ring-secondary focus:outline-none bg-surface transition-all" 
                     placeholder="Phone Number" 
                   />
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full bg-primary text-white px-8 py-5 rounded-2xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all text-lg mt-4 flex items-center justify-center gap-3"
+                  className="w-full bg-primary text-white px-8 py-4 md:py-5 rounded-2xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all text-base md:text-lg mt-4 flex items-center justify-center gap-3"
                 >
-                  Book Appointment Now
+                  Book Now
                   <span className="material-symbols-outlined">arrow_forward</span>
                 </button>
               </form>
               
-              <p className="text-xs text-outline mt-8 uppercase tracking-widest font-bold">
+              <p className="text-[10px] md:text-xs text-outline mt-6 md:mt-8 uppercase tracking-widest font-bold">
                 Typically responds in 15 mins
               </p>
             </div>
