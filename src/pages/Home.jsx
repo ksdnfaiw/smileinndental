@@ -3,6 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { doctorsData } from '../data/doctorsData';
 
+const WhatsAppIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.038 3.041l-.694 2.548 2.621-.687c.731.398 1.734.705 2.803.706l.003-.001c3.182 0 5.767-2.587 5.768-5.766 0-3.18-2.585-5.766-5.766-5.767zm3.303 8.303c-.113.318-.656.58-1.016.617-.34.034-.733.074-2.327-.539-1.7-.652-2.775-2.418-2.851-2.52s-.655-.87-.655-1.676c0-.805.42-.12.504-.21.084-.09.184-.112.246-.112.062 0 .124.001.178.006.059.005.138-.024.216.14.078.163.267.653.29.702.023.049.038.107.006.172-.032.065-.048.11-.097.16-.047.05-.1.112-.143.15-.045.044-.091.092-.039.181.052.089.231.381.497.617.342.304.63.398.718.441.087.043.138.036.19-.022.052-.058.225-.262.285-.35.06-.088.119-.074.201-.044.082.03.523.246.612.29.089.044.148.066.17.104.022.038.022.22-.091.538zM12.006 2C6.471 2 2 6.471 2 12c0 1.92.544 3.707 1.488 5.225L2 22l4.904-1.284c1.543.832 3.3 1.284 5.102 1.284l.001-.001c5.535 0 10.006-4.471 10.006-10.006 0-5.529-4.472-10-10.007-10z"/>
+  </svg>
+);
+
 function useScrollReveal() {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,12 +63,12 @@ export default function Home() {
   useScrollReveal();
 
   const services = [
-    { icon: 'dentistry', title: 'General Dentistry', desc: 'Foundational care including cleanings, fillings, and preventative diagnostics for long-term health.', hoverColor: 'hover:bg-primary hover:text-white' },
-    { icon: 'straighten', title: 'Orthodontics', desc: 'Expert alignment solutions from traditional braces to modern clear aligners like Invisalign.', hoverColor: 'hover:bg-primary hover:text-white' },
-    { icon: 'emergency', title: 'Emergency Care', desc: 'Immediate relief for acute pain, broken teeth, or dental trauma. Prioritized same-day booking.', inverted: true },
-    { icon: 'health_and_safety', title: 'Cosmetic Dentistry', desc: 'Smile makeovers, professional whitening, and porcelain veneers for your most confident self.', hoverColor: 'hover:bg-secondary hover:text-white' },
-    { icon: 'medical_services', title: 'Oral Surgery', desc: 'Precision surgical care including wisdom tooth extraction and dental implant placements.', hoverColor: 'hover:bg-primary hover:text-white' },
-    { icon: 'family_restroom', title: 'Pediatric Care', desc: 'Specialized, gentle dental care designed to build a positive lifelong habit for children.', hoverColor: 'hover:bg-secondary hover:text-white' },
+    { icon: 'dentistry', title: 'General Dentistry', desc: 'Foundational care including cleanings, fillings, and preventative diagnostics for long-term health.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/general-dentistry' },
+    { icon: 'straighten', title: 'Orthodontics', desc: 'Expert alignment solutions from traditional braces to modern clear aligners like Invisalign.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/orthodontics' },
+    { icon: 'emergency', title: 'Emergency Care', desc: 'Immediate relief for acute pain, broken teeth, or dental trauma. Prioritized same-day booking.', inverted: true, path: '/services/restorative-and-general' },
+    { icon: 'health_and_safety', title: 'Cosmetic Dentistry', desc: 'Smile makeovers, professional whitening, and porcelain veneers for your most confident self.', hoverColor: 'hover:bg-secondary hover:text-white', path: '/treatments/cosmetic-dentistry' },
+    { icon: 'medical_services', title: 'Oral Surgery', desc: 'Precision surgical care including wisdom tooth extraction and dental implant placements.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/oral-surgery' },
+    { icon: 'family_restroom', title: 'Pediatric Care', desc: 'Specialized, gentle dental care designed to build a positive lifelong habit for children.', hoverColor: 'hover:bg-secondary hover:text-white', path: '/services/child-dentistry' },
   ];
 
   const doctors = doctorsData;
@@ -70,7 +76,7 @@ export default function Home() {
   const testimonials = [
     { 
       name: 'K Ravindra', 
-      q: 'I recently visited this dental clinic for an RCT treatment, and my experience was very positive. The doctor clearly explained the entire procedure step by step, which made me feel comfortable and confident. The doctor who treated me is highly knowledgeable and very patient. In my case, there were calcium blocks formed in the roots, but the doctor handled the RCT with great care and precision while explaining everything throughout the process. They also suggested the best cap based on my teeth structure after the RCT, which I really appreciated. The entire treatment was completed smoothly within 2–3 weeks. The pricing is reasonable and similar to other clinics, but the quality of care and attention given here truly stands out. Highly recommended!', 
+      q: 'I recently visited this dental clinic for an RCT treatment, and my experience was very positive. The doctor clearly explained the procedure step-by-step, making me feel comfortable and confident. The doctor is highly knowledgeable and patient. In my case, there were calcium blocks formed in the roots, but they handled the RCT with great care. High quality of care and attention. Highly recommended!', 
       loc: '3 weeks ago', 
       inverted: false 
     },
@@ -82,13 +88,13 @@ export default function Home() {
     },
     { 
       name: 'Deepender Dubey', 
-      q: 'I had a truly excellent experience at this dental clinic. The entire team was incredibly professional, patient, and transparent throughout the treatment process. They took the time to carefully guide us through every step, clearly explaining the available options and what to expect. What I appreciated the most was their honesty and integrity. Instead of suggesting unnecessary procedures, they genuinely focused on what was actually needed for the best long-term outcome. That level of trust and patient-first approach is rare and very reassuring. The staff was welcoming, the doctors were knowledgeable, and the overall experience felt thoughtful and personalized. I\'m grateful for their guidance and highly recommend this clinic to anyone looking for trustworthy and skilled dental care.', 
+      q: 'Wonderful experience. The entire team was professional, patient, and transparent throughout the process. They genuinely focused on what was actually needed for the best long-term outcome. Trust and patient-first approach is Rare and very reassuring. Highly recommend for trustworthy and skilled dental care.', 
       loc: '4 weeks ago', 
       inverted: false 
     },
     { 
       name: 'radha bodapati', 
-      q: 'I got root canal done from Dr Deedeepya Adapa. Initially I was very fearful, but doctor handled it very well and provided me with completely painless treatment, very knowledgeable about the situation of my teeth. Best clinic for dental problems.', 
+      q: 'I got root canal done from Dr Deedeepya Adapa. Handle it very well and provided me with completely painless treatment, very knowledgeable about the situation of my teeth. Best clinic for dental problems.', 
       loc: '6 weeks ago', 
       inverted: true 
     },
@@ -100,34 +106,10 @@ export default function Home() {
     },
     { 
       name: 'vaishnavi surampally', 
-      q: 'Thanks to Smile inn Dental Clinics. I have had a brace. The professionalism, the attention to detail, the friendliness.', 
+      q: 'Thanks to Smile inn Dental Clinics. I have had a brace. The professionalism, the attention to detail, and the friendliness made it all easier.', 
       loc: '13 weeks ago', 
       inverted: true 
     },
-    { 
-      name: 'nikhitha mogilicharla', 
-      q: 'I had a fantastic experience at Smile inn. The staff and doctors very friendly and professional. Dr. Chandrakanth.', 
-      loc: '13 weeks ago', 
-      inverted: false 
-    },
-    { 
-      name: 'Pambi Dinesh', 
-      q: 'Had an amazing experience, team was super friendly and made me feel at ease. The treatment was pain-free and exactly.', 
-      loc: '13 weeks ago', 
-      inverted: true 
-    },
-    { 
-      name: 'Anvitha Nagabelli', 
-      q: 'Excellent dental clinic with friendly and professional staff. They really care about patient comfort, and the clinic is clean and well organized. A great place for both adults and kids.', 
-      loc: '13 weeks ago', 
-      inverted: false 
-    },
-    { 
-      name: 'Harshith Mateti', 
-      q: 'I had a comfortable experience at Smile Inn Dental Clinic. The doctor explained the procedure clearly, and the staff.', 
-      loc: '13 weeks ago', 
-      inverted: true 
-    }
   ];
 
   function ReviewToggle({ text, inverted }) {
@@ -179,6 +161,7 @@ export default function Home() {
   ];
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -186,6 +169,21 @@ export default function Home() {
     }, 5000);
     return () => clearInterval(timer);
   }, [testimonials.length]);
+
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem('hasSeenPopup');
+    if (!hasSeenPopup) {
+      const popupTimer = setTimeout(() => {
+        setShowPopup(true);
+      }, 5000);
+      return () => clearTimeout(popupTimer);
+    }
+  }, []);
+
+  const closePopup = () => {
+    setShowPopup(false);
+    sessionStorage.setItem('hasSeenPopup', 'true');
+  };
 
   return (
     <div className="pt-0 overflow-x-hidden">
@@ -204,35 +202,32 @@ export default function Home() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-bold tracking-widest uppercase animate-fade-in">
               MDS Specialist-Led Studio
             </div>
-            <h1 className="text-5xl lg:text-8xl font-headline text-primary leading-tight">
-              Where Your Smile <br />
-              <span className="italic text-on-primary-container">Meets Perfection.</span>
+            <h1 className="text-5xl lg:text-7xl font-headline text-primary leading-tight">
+              Top Tier Dental Clinic in <br />
+              <span className="italic text-on-primary-container">Nagole & Balapur.</span>
             </h1>
             <p className="text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed opacity-90">
-              Experience a new standard of dental artistry. We blend master-level clinical expertise with a serene, patient-first atmosphere.
+              Experience expert, painless dental care tailored to give you the perfect smile. We make your visits comfortable and easy.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 items-center">
               <button
                 onClick={() => navigate('/book')}
-                className="btn-primary"
+                className="btn-primary text-lg px-8 py-4 sm:px-10 sm:py-5"
               >
-                <span className="material-symbols-outlined">calendar_today</span> Book Visit
+                <span className="material-symbols-outlined">calendar_today</span> Book Appointment
               </button>
               <button 
                 onClick={() => window.open('https://wa.me/919177317253', '_blank')}
-                className="btn-secondary"
+                className="bg-green-50 text-green-700 px-6 py-4 rounded-xl font-bold hover:bg-green-100 transition-all duration-300 flex items-center gap-3 border border-green-200"
               >
-                <span className="material-symbols-outlined">chat</span> WhatsApp
-              </button>
-              <button 
-                onClick={() => window.location.href = 'tel:+919177317253'}
-                className="p-4 border-2 border-outline-variant text-primary rounded-xl hover:bg-surface-container-low transition-all duration-300"
-              >
-                <span className="material-symbols-outlined">call</span>
+                <div className="bg-green-600 text-white p-1 rounded-full shadow-sm">
+                  <WhatsAppIcon />
+                </div>
+                WhatsApp Us Directly
               </button>
             </div>
             <div className="grid grid-cols-3 gap-8 pt-4">
-              {[['10+', 'Years'], [`${doctorsData.length} MDS`, 'Specialists'], ['2', 'Locations']].map(([num, label]) => (
+              {[['10+', 'Years'], [`MDS`, 'Specialists'], ['2', 'Locations']].map(([num, label]) => (
                 <div key={label}>
                   <div className="text-3xl font-headline text-secondary">{num}</div>
                   <div className="text-xs uppercase tracking-wider font-bold text-outline mt-1">{label}</div>
@@ -245,8 +240,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-primary-container/10 z-10"></div>
             <img
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKsv_FKV8m3ISGM1cmGKeYZqYfcZouSvgnCKiIZg8a4RHZwWE1NxkVljWmJ7quxfHdB-ixa1XsFUrnV0lmxcprM6VNaum7kI9LwUgA4AxmMGgI_HaTLJ3aPLJ6W9fZiSX-63fkt2hTL8EqedXI2YFEeWO74-J2mPGi1R6609ijxeLHSq85Aq6oxt1FbibSH8NtBZIJbfjaFXnxkoW-mMJcLN00uVkyZG-om1GwYLMlQJ_-bdMU9qIrLH-o7u3DhiC6y0jxwLlQVlo"
-              alt="Smile Inn Dental Clinic modern lobby interior, Nagole branch, Hyderabad"
+              src="/premium_interior.png"
+              alt="Smile Inn Dental Clinic premium interior, Hyderabad"
             />
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary rounded-full blur-[80px] opacity-20"></div>
           </div>
@@ -261,7 +256,7 @@ export default function Home() {
               {[
                 { icon: 'biotech', label: 'Advanced Digital' },
                 { icon: 'sanitizer', label: 'Sterilization Focused' },
-                { icon: 'school', label: '5 MDS Experts' },
+                { icon: 'school', label: 'Led by MDS Doctors' },
                 { icon: 'spa', label: 'Painless Care' },
                 { icon: 'schedule', label: 'Open Mon–Sun' },
               ].map(({ icon, label }) => (
@@ -283,28 +278,32 @@ export default function Home() {
             <h2 className="text-4xl font-headline text-primary mt-2">Comprehensive Dental Artistry</h2>
           </div>
           <p className="text-on-surface-variant max-w-sm">
-            From routine checks to complex surgical interventions, we provide end-to-end care using global protocols.
+            From routine checkups to painless root canals and perfect smile makeovers, our skilled dentists provide complete care under one roof.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map(({ icon, title, desc, inverted, hoverColor }) =>
+          {services.map(({ icon, title, desc, inverted, hoverColor, path }) =>
             inverted ? (
-              <div key={title} className="bg-primary-container p-8 rounded-xl shadow-xl shadow-primary/20 transform md:-translate-y-4 group transition-all duration-500 hover:scale-[1.03] hover:shadow-primary/40">
+              <div 
+                key={title} 
+                onClick={() => navigate(path)}
+                className="bg-primary-container p-8 rounded-xl shadow-xl shadow-primary/20 transform md:-translate-y-4 group transition-all duration-500 hover:scale-[1.03] hover:shadow-primary/40 cursor-pointer"
+              >
                 <div className="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500">
                   <span className="material-symbols-outlined text-on-secondary-container text-4xl">{icon}</span>
                 </div>
                 <h3 className="text-2xl font-headline text-white mb-4">{title}</h3>
                 <p className="text-base text-on-primary-container leading-relaxed mb-8">{desc}</p>
                 <button
-                  onClick={() => navigate('/book')}
+                  onClick={(e) => { e.stopPropagation(); navigate('/book'); }}
                   className="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest inline-block hover:bg-white hover:text-primary transition-all duration-300"
                 >
-                  Call Now
+                  Book Appointment
                 </button>
               </div>
             ) : (
-              <div key={title} className={`bg-surface-container-low p-8 rounded-xl ${hoverColor} hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group cursor-pointer`} onClick={() => navigate('/services')}>
+              <div key={title} className={`bg-surface-container-low p-8 rounded-xl ${hoverColor} hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group cursor-pointer`} onClick={() => navigate(path)}>
                 <div className="w-14 h-14 bg-on-primary-container/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-500">
                   <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transition-colors duration-500">{icon}</span>
                 </div>
@@ -345,10 +344,10 @@ export default function Home() {
             </div>
             <div className="space-y-8">
               {[
-                { n: '01', t: 'MDS Specialists Only', d: 'Unlike general clinics, complex cases are handled by dedicated Master of Dental Surgery specialists.' },
-                { n: '02', t: 'Ultra-Modern Diagnostics', d: 'Equipped with 3D scanning and digital X-rays to ensure 100% accuracy in treatment planning.' },
-                { n: '03', t: 'Painless Protocols', d: 'We utilize advanced numbing techniques and sedation options to ensure zero patient discomfort.' },
-                { n: '04', t: 'Holistic Patient Journey', d: 'From booking to post-care follow-ups, our process is streamlined for maximum convenience.' },
+                { n: '01', t: 'Led by MDS Experts', d: 'Your treatments are handled by highly qualified Master of Dental Surgery specialists to ensure the best care.' },
+                { n: '02', t: 'Advanced Digital Scans', d: 'Equipped with top-tier 3D scanning and digital X-rays to perfectly plan your treatment without guesswork.' },
+                { n: '03', t: '100% Painless Treatments', d: 'We use modern numbing techniques to ensure you feel absolutely no pain or stress during your visit.' },
+                { n: '04', t: 'Simple & Transparent', d: 'No hidden costs and no confusing medical terms. We explain everything clearly before we begin.' },
               ].map(({ n, t, d }) => (
                 <div key={n} className="flex gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary font-bold group-hover:bg-primary-container group-hover:text-white group-hover:border-transparent transition-all duration-300">
@@ -387,21 +386,39 @@ export default function Home() {
       </section>
 
       {/* Doctors */}
-      <section className="py-24 bg-surface-container">
-        <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <div className="mb-16">
-            <span className="text-secondary font-bold text-[0.6875rem] tracking-[0.2em] uppercase">The Specialists</span>
-            <h2 className="text-4xl font-headline text-primary mt-2">Led by Master Clinicians</h2>
+      <section className="py-24 bg-surface-container-low relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#ccf07311,_transparent,_transparent)]"></div>
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <span className="text-secondary font-bold text-[0.6875rem] tracking-[0.2em] uppercase">The Specialists</span>
+              <h2 className="text-4xl md:text-5xl font-headline text-primary mt-4">Led by Master Clinicians</h2>
+              <p className="text-on-surface-variant text-lg mt-6 leading-relaxed">
+                Our clinic is anchored by highly qualified MDS specialists, ensuring that complex treatments are handled with advanced academic knowledge and surgical precision.
+              </p>
+            </div>
+            <button 
+              onClick={() => navigate('/about')}
+              className="px-8 py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              Meet Our Entire Team
+            </button>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {doctors.map(({ name, role, img }) => (
-              <div key={name} className="group cursor-pointer">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative">
-                  <img className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={img} alt={`${name}, ${role} at Smile Inn Dental Clinics Hyderabad`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div key={name} className="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="aspect-[4/5] rounded-xl overflow-hidden mb-8 relative">
+                  <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={img} alt={`${name}, ${role} at Smile Inn Dental Clinics Hyderabad`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="font-headline text-lg text-primary">{name}</h3>
-                <p className="text-xs font-bold text-secondary tracking-widest uppercase">{role}</p>
+                <h3 className="font-headline text-2xl text-primary mb-2">{name}</h3>
+                <p className="text-sm font-bold text-secondary tracking-widest uppercase mb-4">{role}</p>
+                <button
+                  onClick={() => navigate('/book')}
+                  className="w-full py-3 bg-surface-container-high text-primary font-bold rounded-lg text-sm hover:bg-primary hover:text-white transition-colors"
+                >
+                  Book Appointment
+                </button>
               </div>
             ))}
           </div>
@@ -417,20 +434,24 @@ export default function Home() {
         <div className="relative">
           <div 
             className="flex transition-transform duration-1000 ease-in-out"
-            style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
+            style={{ 
+              transform: `translateX(-${activeTestimonial * (100 / (typeof window !== 'undefined' && window.innerWidth >= 1024 ? 2 : 1))}%)` 
+            }}
           >
             {testimonials.map(({ q, name, loc, inverted }, idx) => (
-              <div key={idx} className="w-full flex-shrink-0 px-4">
-                <div className={`p-12 md:p-20 rounded-[3rem] shadow-sm italic text-center max-w-4xl mx-auto ${inverted ? 'bg-primary-container shadow-2xl shadow-primary/20' : 'bg-surface border border-outline-variant/10'}`}>
-                  <div className={`text-6xl mb-8 ${inverted ? 'text-secondary-container opacity-50' : 'text-secondary opacity-30 font-serif'}`}>"</div>
-                  <ReviewToggle text={q} inverted={inverted} />
-                  <div className="flex flex-col items-center gap-4 not-italic">
-                    <div className={`w-16 h-16 rounded-full border-2 ${inverted ? 'border-secondary/30 bg-white/10' : 'border-primary/10 bg-primary/5'} flex items-center justify-center`}>
+              <div key={idx} className="w-full lg:w-1/2 flex-shrink-0 px-4">
+                <div className={`p-8 md:p-14 h-full rounded-[2.5rem] shadow-sm italic flex flex-col justify-between ${inverted ? 'bg-primary-container shadow-2xl shadow-primary/20' : 'bg-surface border border-outline-variant/10'}`}>
+                  <div>
+                    <div className={`text-6xl mb-6 ${inverted ? 'text-secondary-container opacity-50' : 'text-secondary opacity-30 font-serif'}`}>"</div>
+                    <ReviewToggle text={q} inverted={inverted} />
+                  </div>
+                  <div className="flex flex-col items-center gap-4 not-italic mt-10">
+                    <div className={`w-14 h-14 rounded-full border-2 ${inverted ? 'border-secondary/30 bg-white/10' : 'border-primary/10 bg-primary/5'} flex items-center justify-center`}>
                       <span className={`material-symbols-outlined text-3xl ${inverted ? 'text-secondary' : 'text-primary'}`}>person</span>
                     </div>
                     <div>
-                      <div className={`font-bold text-xl ${inverted ? 'text-white' : 'text-primary'}`}>{name}</div>
-                      <div className={`text-sm uppercase tracking-widest ${inverted ? 'text-on-primary-container opacity-70' : 'text-secondary'}`}>{loc}</div>
+                      <div className={`font-bold text-lg ${inverted ? 'text-white' : 'text-primary'}`}>{name}</div>
+                      <div className={`text-xs uppercase tracking-widest ${inverted ? 'text-on-primary-container opacity-70' : 'text-secondary'}`}>{loc}</div>
                     </div>
                   </div>
                 </div>
@@ -472,43 +493,50 @@ export default function Home() {
 
       {/* Clinic Locations */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-headline text-primary mb-12 text-center">Visit Our Clinics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <h2 className="text-4xl font-headline text-primary mb-16 text-center">Visit Our Clinics</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {[
             {
               name: 'Nagole Branch', 
-              addr: 'Gurukrupa Building, 1st Floor, Alkapuri X Road, Nagole, Hyderabad - 500068.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSyYAOcferJ27vIWTuj_SwMtqRFPDf0NCHcAQF509FP9DoAgLeL_4Kk586R_07k9rReQI3hZ7I6GDWVkANU6Csd0NhDpN_cQqBQaBJRxSYq6WhKKxm8fNBGuogVe2s0hat0KLUiTI-IxNwCHTU7YLhK1H2ApUlWTt1M5cHVmqTtTetr3tvSOxWYmzPxh8CMuey9-U8g3FME0fuPWmf1fjhuytFRbpk6e4ZmpcSoMFnkpN8cwUphHFT4g_PMqyv3G1xZ5FK8QJuW5E',
+              addr: 'Gurukrupa Building, 1st Floor, Alkapuri X Road, Nagole.',
+              status: 'OPEN ALL 7 DAYS',
               mapUrl: 'https://maps.google.com/?q=Smile+Inn+Dental+Nagole'
             },
             {
               name: 'Balapur Branch', 
-              addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur, Hyderabad - 500097.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHFoLn_agtTmbJS-F_Z9qJa291kf_mI2IE92iVmxd3EkHk6OiqWmdThzRUI1vvZTIHrgbE-pgldIwlZ8KxTLcw6jjQPRkHLxu88DFklcNuPh4kmHNYwSyz3OHKrqofM1q99pQVi8oEOdLZWwPuth0KI5j0r7pObYjIW0GHDQPCSqC1VQJrrbFWSq2Pymzsw6mIRLuurLi6BbLV_vI7LQEBSl6zHG-pgvCt9xxhHkl-NpE4XcEIA4mBQV9MNu0x6lugl5A7bHfr1Ak',
+              addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur.',
+              status: 'OPEN ALL 7 DAYS',
               mapUrl: 'https://maps.google.com/?q=Sri+Amrutha+Laxmi+Dental+Balapur'
             },
-          ].map(({ name, addr, img, mapUrl }) => (
-            <div key={name} className="bg-surface-container-low rounded-xl overflow-hidden shadow-lg group">
-              <div className="h-64 bg-slate-200 overflow-hidden">
-                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src={img} alt={`Smile Inn Dental Clinic exterior, ${name}, Hyderabad`} />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-headline text-primary mb-2">{name}</h3>
-                <p className="text-sm text-on-surface-variant mb-6">{addr}</p>
-                <div className="flex gap-4">
-                  <button 
-                    onClick={() => window.open(mapUrl, '_blank')}
-                    className="flex-1 bg-primary text-white py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
-                  >
-                    View on Maps
-                  </button>
-                  <button 
-                    onClick={() => window.location.href = 'tel:+919177317253'}
-                    className="px-4 border-2 border-outline text-primary rounded-lg hover:bg-surface-container-low transition-colors"
-                  >
-                    <span className="material-symbols-outlined">call</span>
-                  </button>
+          ].map(({ name, addr, status, mapUrl }) => (
+            <div key={name} className="bg-white rounded-xl shadow-lg border-l-4 border-secondary p-8 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+              <div>
+                <div className="flex items-center gap-2 mb-4 text-secondary">
+                  <span className="material-symbols-outlined">location_on</span>
+                  <h3 className="text-xl font-bold font-sans text-primary">{name}</h3>
                 </div>
+                <p className="text-slate-600 mb-6 text-sm">{addr}</p>
+                <div className="font-bold text-sm tracking-widest text-slate-800 mb-8 uppercase">
+                  {status}
+                </div>
+              </div>
+              <div className="flex justify-between items-center pt-6 border-t border-slate-100">
+                <button 
+                  onClick={() => window.open(mapUrl, '_blank')}
+                  className="text-slate-600 hover:text-secondary font-bold text-sm flex items-center gap-1 transition-colors group-hover:translate-x-1 duration-300"
+                >
+                  <span className="material-symbols-outlined transform -rotate-45 text-lg">arrow_forward</span> Get Directions
+                </button>
+                <button 
+                  onClick={() => navigate('/book')}
+                  className="flex items-center border border-outline-variant rounded hover:border-secondary transition-colors overflow-hidden group/btn"
+                >
+                  <span className="px-4 py-2 text-sm font-bold text-primary group-hover/btn:text-secondary transition-colors uppercase">BOOK APPOINTMENT</span>
+                  <div className="bg-secondary text-white p-2 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-sm">chevron_right</span>
+                  </div>
+                </button>
               </div>
             </div>
           ))}
@@ -516,23 +544,110 @@ export default function Home() {
       </section>
 
       {/* Full Width CTA */}
+      <section className="px-6 md:px-8 mb-24 max-w-7xl mx-auto">
+        <div className="bg-green-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-green-100 shadow-sm relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-green-200/20 blur-3xl rounded-full"></div>
+          <div className="flex items-center gap-6">
+            <div className="w-20 h-20 bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
+              <WhatsAppIcon />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-headline text-green-800 mb-2">WhatsApp Us Directly</h2>
+              <p className="text-green-700 font-medium">Quick responses — typically within 15 minutes</p>
+            </div>
+          </div>
+          <button 
+            onClick={() => window.open('https://wa.me/919177317253', '_blank')}
+            className="w-full md:w-auto bg-green-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-green-700 transition-all shadow-md flex items-center justify-center gap-2"
+          >
+            Start Chat <span className="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </section>
+
+      {/* Booking CTA */}
       <section className="mx-4 md:mx-8 mb-24">
-        <div className="max-w-7xl mx-auto bg-primary-container rounded-xl p-12 md:p-16 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#ccf07333,_transparent,_transparent)]"></div>
+        <div className="max-w-7xl mx-auto bg-primary-container rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#ccf07322,_transparent,_transparent)]"></div>
           <div className="relative z-10">
-            <h2 className="text-4xl lg:text-5xl font-headline text-white mb-6">Ready to Transform Your Smile?</h2>
-            <p className="text-on-primary-container max-w-xl mx-auto mb-10 text-lg">
-              Book your first session today and experience clinical dentistry at its finest.
+            <h2 className="text-4xl lg:text-5xl font-headline text-white mb-8">Ready to Transform Your Smile?</h2>
+            <p className="text-on-primary-container max-w-xl mx-auto mb-12 text-lg leading-relaxed">
+              Book your session today and experience expert clinical dentistry that is easy and relaxing.
             </p>
             <button
               onClick={() => navigate('/book')}
-              className="px-12 py-5 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="px-12 py-5 bg-secondary-container text-on-secondary-container rounded-xl font-bold text-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
-              Schedule Your Appointment
+              Book Appointment
             </button>
           </div>
         </div>
       </section>
+
+      {/* 5 Second Popup Modal */}
+      {showPopup && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 animate-fade-in">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-primary/40 backdrop-blur-sm"
+            onClick={closePopup}
+          ></div>
+          
+          {/* Modal Content */}
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-xl border border-secondary/20 overflow-hidden relative z-10 animate-slide-up">
+            <button 
+              onClick={closePopup}
+              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-slate-400 hover:text-primary hover:bg-surface-container-low rounded-full transition-all"
+              aria-label="Close"
+            >
+              <span className="material-symbols-outlined text-2xl font-bold">close</span>
+            </button>
+            
+            <div className="p-8 md:p-12 text-center">
+              <div className="w-20 h-20 bg-secondary-container text-on-secondary-container rounded-3xl flex items-center justify-center mx-auto mb-8 rotate-3 group-hover:rotate-0 transition-transform">
+                <span className="material-symbols-outlined text-4xl">calendar_month</span>
+              </div>
+              
+              <h3 className="text-3xl md:text-4xl font-headline text-primary mb-4">Book Your Appointment</h3>
+              <p className="text-on-surface-variant text-base mb-10 leading-relaxed">
+                Experience expert clinical dentistry that is easy and relaxing. Fill in your details below to get started.
+              </p>
+              
+              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); navigate('/book'); }}>
+                <div className="relative">
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-xl">person</span>
+                  <input 
+                    type="text" 
+                    required 
+                    className="w-full border border-outline-variant rounded-2xl pl-12 pr-4 py-4 text-base focus:ring-2 focus:ring-secondary focus:outline-none bg-surface transition-all" 
+                    placeholder="Your Full Name" 
+                  />
+                </div>
+                <div className="relative">
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-xl">call</span>
+                  <input 
+                    type="tel" 
+                    required 
+                    className="w-full border border-outline-variant rounded-2xl pl-12 pr-4 py-4 text-base focus:ring-2 focus:ring-secondary focus:outline-none bg-surface transition-all" 
+                    placeholder="Phone Number" 
+                  />
+                </div>
+                <button 
+                  type="submit" 
+                  className="w-full bg-primary text-white px-8 py-5 rounded-2xl font-bold hover:shadow-2xl hover:-translate-y-1 transition-all text-lg mt-4 flex items-center justify-center gap-3"
+                >
+                  Book Appointment Now
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </form>
+              
+              <p className="text-xs text-outline mt-8 uppercase tracking-widest font-bold">
+                Typically responds in 15 mins
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

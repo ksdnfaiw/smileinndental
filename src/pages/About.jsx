@@ -23,7 +23,7 @@ export default function About() {
     <div className="pt-0">
       <SEO
         title="About Us · 10 Years of Specialist Dental Care · Smile Inn"
-        description="Meet the team behind Smile Inn — 5 MDS-qualified dentists serving Hyderabad for over 10 years with honest, advanced dental care."
+        description="Meet the team behind Smile Inn — MDS-qualified dentists serving Hyderabad for over 10 years with honest, advanced, and painless dental care."
         keywords="about Smile Inn Dental, dentist Hyderabad, MDS dental specialists Hyderabad, best dental team Nagole"
         canonicalPath="/about"
       />
@@ -60,18 +60,18 @@ export default function About() {
             <h2 className="text-5xl font-serif text-primary italic">Our Story</h2>
             <div className="space-y-8 text-xl leading-relaxed text-slate-700">
               <p>
-                Founded in 2014, Smile Inn Dental Clinics began with a singular vision: to transform dental care from a clinical chore into a curated wellness experience. Our journey in Hyderabad started in a boutique-style clinic where we prioritized patient comfort and clinical precision above all else.
+                Founded in 2014, Smile Inn Dental Clinics began with a simple vision: to provide the highest quality dental care in a comfortable, relaxed environment. For over 10 years, we have been the go-to dental clinic in Hyderabad, ensuring every patient receives painless and expert treatments.
               </p>
               <blockquote className="border-l-4 border-secondary pl-10 py-6 my-12">
                 <p className="text-3xl font-serif italic text-primary leading-tight">
-                  "We don't just treat teeth; we restore confidence through the intersection of artistry and medical excellence."
+                  "We don't just treat teeth; we give you the confidence of a perfect, healthy smile."
                 </p>
               </blockquote>
               <p>
-                Over the last decade, we have expanded our family to Nagole and Balapur, bringing together a collective of specialists who share a commitment to evidence-based dentistry. We believe that a smile is the most profound expression of health.
+                Over the last decade, we have expanded our trusted services to Nagole and Balapur. Our team of highly qualified MDS doctors specialize in everything from routine checkups and root canals to advanced dental implants and braces.
               </p>
               <p>
-                Today, Smile Inn stands as a beacon of high-end clinical excellence, where every patient is treated as a guest in our modern dental studio. We leverage the latest in 3D imaging and painless technology to ensure your journey with us is as seamless as it is transformative.
+                Today, Smile Inn is known for complete transparency, affordable pricing, and 100% painless procedures. We use the latest 3D imaging and modern technology so that you get the best dental care possible without the fear usually associated with visiting a dentist.
               </p>
             </div>
           </div>
@@ -103,9 +103,9 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <span className="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Our Team</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary">{doctorsData.length} Specialists. One Mission.</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary">Expert Specialists. One Mission.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {doctors.map(({ name, role, badge, desc, img }) => (
               <div key={name} className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
                 <div className="h-80 overflow-hidden relative">

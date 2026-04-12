@@ -59,7 +59,7 @@ export const categories = [
     color: 'amber',
     count: '6 treatments',
     services: [
-      { title: 'Root Canal Treatment', desc: 'Hassle-free, painless RCT using advanced rotary systems and MDS expertise.' },
+      { title: 'Root Canal Treatment', desc: 'Seamless, painless RCT using advanced rotary systems and MDS expertise.' },
       { title: 'Aesthetic Fillings', desc: 'Tooth-colored composite resins that restore strength while blending perfectly.' },
       { title: 'Pain-Free Cleaning', desc: 'Professional scaling and polishing to remove plaque and restore brightness.' },
       { title: 'Crowns & Bridges', desc: 'Durable, natural-looking porcelain or ceramic crowns to protect damaged teeth.' },
@@ -90,7 +90,7 @@ export const categories = [
     color: 'indigo',
     count: '2 treatments',
     services: [
-      { title: 'Pediatric Care', desc: 'Fun, stress-free checkups and cleanings designed to build positive habits.' },
+      { title: 'Pediatric Care', desc: 'Fun, relaxing checkups and cleanings designed to build positive habits.' },
       { title: 'Habit Counselling', desc: 'Expert guidance for thumb-sucking, mouth breathing, or other child habits.' }
     ]
   },
@@ -103,7 +103,7 @@ export const categories = [
     count: '4 treatments',
     services: [
       { title: 'Digital X-rays', desc: 'Instant high-resolution imaging with 90% less radiation than traditional film.' },
-      { title: '3D Intraoral Scanners', desc: 'Mess-free digital impressions for perfectly fitting crowns and aligners.' },
+      { title: '3D Intraoral Scanners', desc: 'Digital impressions for perfectly fitting crowns and aligners with zero mess.' },
       { title: 'Dental Lasers', desc: 'Modern technology for painless surgeries and accelerated healing of tissues.' },
       { title: 'Intraoral HD Cameras', desc: 'See what we see with high-definition tours of your teeth and gums.' }
     ]
