@@ -5,7 +5,7 @@ export default function GeneralDentistry() {
   const navigate = useNavigate();
 
   const services = [
-    { title: 'Digital Checkups', icon: 'visibility', desc: 'Precision diagnostics using ultra-low radiation digital X-rays and intraoral HD cameras.' },
+    { title: 'Digital Checkups', icon: 'visibility', desc: 'Precise diagnosis using ultra-low radiation digital X-rays and intraoral HD cameras.' },
     { title: 'Pain-Free Cleaning', icon: 'cleaning_services', desc: 'Ultrasonic scaling and professional polishing to remove plaque and restore your smile\'s brightness.' },
     { title: 'Aesthetic Fillings', icon: 'texture', desc: 'Composite resin restorations that match your tooth color perfectly, restoring both form and function.' },
     { title: 'Root Canal (MDS Specialist)', icon: 'biotech', desc: 'Expert endodontic care using advanced rotary systems for a faster, pain-free restorative experience.' }
@@ -31,7 +31,7 @@ export default function GeneralDentistry() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight">
-            Foundational <br /><span className="italic text-secondary">Excellence.</span>
+            Foundational <br /><span className="italic text-secondary-fixed-dim">Excellence.</span>
           </h1>
           <p className="text-xl md:text-2xl text-on-primary-container opacity-90 max-w-2xl mx-auto">
             Preventive care designed to keep your natural smile healthy and radiant for a lifetime.

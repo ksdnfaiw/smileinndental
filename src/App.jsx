@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingActions from './components/FloatingActions';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -77,6 +78,7 @@ export default function App() {
         <main className="flex-1">
           <AnimatedRoutes />
         </main>
+        <FloatingActions />
         <Footer />
       </div>
     </BrowserRouter>

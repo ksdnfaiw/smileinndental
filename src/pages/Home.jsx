@@ -226,7 +226,7 @@ export default function Home() {
             </div>
             <h1 className="text-5xl lg:text-7xl font-headline text-primary leading-tight">
               Top Tier Dental Clinic in <br />
-              <span className="italic text-on-primary-container">Nagole & Balapur.</span>
+              <span className="italic text-on-primary-container">Nagole & Balapur</span>
             </h1>
             <p className="text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed opacity-90">
               Experience expert, painless dental care tailored to give you the perfect smile. We make your visits comfortable and easy.
@@ -249,7 +249,7 @@ export default function Home() {
               </button>
             </div>
             <div className="grid grid-cols-3 gap-8 pt-4">
-              {[['10+', 'Years'], [`MDS`, 'Specialists'], ['2', 'Locations']].map(([num, label]) => (
+              {[['13+', 'Years'], [`MDS`, 'Specialists'], ['2', 'Locations']].map(([num, label]) => (
                 <div key={label}>
                   <div className="text-3xl font-headline text-secondary">{num}</div>
                   <div className="text-xs uppercase tracking-wider font-bold text-outline mt-1">{label}</div>
@@ -276,7 +276,7 @@ export default function Home() {
           {[...Array(3)].map((_, i) => (
             <div key={i} className="flex gap-16 md:gap-24 items-center shrink-0 px-8 md:px-12">
               {[
-                { icon: 'biotech', label: 'Advanced Digital' },
+                { icon: 'biotech', label: 'Advanced Digital Dentistry' },
                 { icon: 'sanitizer', label: 'Sterilization Focused' },
                 { icon: 'school', label: 'Led by MDS Doctors' },
                 { icon: 'spa', label: 'Painless Care' },

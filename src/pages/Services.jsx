@@ -19,20 +19,21 @@ export default function Services() {
         canonicalPath="/services"
       />
       {/* Hero */}
-      <section className="relative bg-primary-container text-white overflow-hidden py-24 md:py-40">
-        <div className="absolute inset-0 opacity-10">
+      <section className="relative bg-primary-container text-white overflow-hidden py-32 md:py-56">
+        <div className="absolute inset-0 opacity-20">
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-110"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNV8DKnF_pRBk6Wx8tY6r_RJHDcoVWY3Xv0s_wJ_KyNlsE_Droe0e5QSM6TYg_LJA5RzrzdIfma3HaHw4R_6LX5XE_GnSSMM2PyJnw3GYdWGrbBw7WYllNfEb8oUvawMz0_umcvMxeLfJ9WceeTGp3Ijk6dytOkbz4b_1aBJMzoH47cGg_LFE8Q_0SZ311SV_jaKI7NvQVlO44siMSwn06_gW-IRKKi-hS9br6IEIXLbRxHAGRfa0epZ9YlW7y3LRE3K2oSgeuOY4"
             alt="Smile Inn Dental Clinic specialized services background"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/80 to-transparent"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-3xl">
-            <span className="text-secondary-container font-bold tracking-widest text-sm uppercase mb-4 block">Specialist Clinical Care</span>
-            <h1 className="text-5xl md:text-8xl font-headline mb-8 leading-tight">Our Services</h1>
+            <span className="text-secondary-container font-bold tracking-[0.4em] uppercase text-sm mb-6 block animate-fade-in">Specialist Clinical Care</span>
+            <h1 className="text-6xl md:text-9xl font-headline mb-10 leading-tight">Our Services</h1>
             <p className="text-2xl md:text-3xl text-on-primary-container leading-relaxed max-w-2xl opacity-90">
-              Select a category to explore our comprehensive specialist-led treatments.
+              Select a category below to explore our range of <span className="text-white font-bold italic">specialist-led</span> clinical treatments.
             </p>
           </div>
         </div>
