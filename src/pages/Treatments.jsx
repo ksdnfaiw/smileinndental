@@ -20,6 +20,13 @@ export default function Treatments() {
       features: ['Invisalign®', 'Clear Braces', 'Jaw Correction']
     },
     {
+      title: 'Emergency Care',
+      path: '/treatments/emergency-care',
+      icon: 'emergency',
+      desc: 'Immediate relief for acute pain and trauma.',
+      features: ['Pain Relief', 'Broken Teeth', 'Trauma Care']
+    },
+    {
       title: 'Cosmetic Dentistry',
       path: '/treatments/cosmetic-dentistry',
       icon: 'health_and_safety',
@@ -32,6 +39,13 @@ export default function Treatments() {
       icon: 'medical_services',
       desc: 'Precision surgical care by MDS experts.',
       features: ['Dental Implants', 'Wisdom Teeth', 'Bone Grafting']
+    },
+    {
+      title: 'Pediatric Care',
+      path: '/treatments/pediatric-care',
+      icon: 'child_care',
+      desc: 'Gentle care for our youngest patients.',
+      features: ['Cavity Prevention', 'Growth Monitoring', 'Friendly Environment']
     }
   ];
 
@@ -56,7 +70,7 @@ export default function Treatments() {
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <span className="text-secondary-container font-bold tracking-[0.3em] uppercase text-sm mb-6 block animate-fade-in">Department of Excellence</span>
           <h1 className="text-5xl md:text-8xl font-headline text-white mb-8 leading-tight">
-            Advanced Dental <span className="italic text-secondary">Artistry</span>
+            Advanced Dental <span className="italic text-secondary-fixed-dim">Artistry</span>
           </h1>
           <p className="text-xl md:text-2xl text-on-primary-container opacity-90 max-w-2xl mx-auto leading-relaxed">
             Where world-class technology meets specialist clinical expertise.

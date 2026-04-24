@@ -17,6 +17,8 @@ import Orthodontics from './pages/Orthodontics';
 import CosmeticDentistry from './pages/CosmeticDentistry';
 import CategoryDetail from './pages/CategoryDetail';
 import OralSurgery from './pages/OralSurgery';
+import EmergencyCare from './pages/EmergencyCare';
+import PediatricCare from './pages/PediatricCare';
 import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
@@ -50,8 +52,10 @@ function AnimatedRoutes() {
         <Route path="/treatments" element={<Treatments />} />
         <Route path="/treatments/general-dentistry" element={<GeneralDentistry />} />
         <Route path="/treatments/orthodontics" element={<Orthodontics />} />
+        <Route path="/treatments/emergency-care" element={<EmergencyCare />} />
         <Route path="/treatments/cosmetic-dentistry" element={<CosmeticDentistry />} />
         <Route path="/treatments/oral-surgery" element={<OralSurgery />} />
+        <Route path="/treatments/pediatric-care" element={<PediatricCare />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
