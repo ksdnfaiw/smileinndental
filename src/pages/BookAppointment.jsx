@@ -137,7 +137,7 @@ export default function BookAppointment() {
                   >
                     <option value="">Select Branch</option>
                     <option>Nagole Branch</option>
-                    <option>Balapur Branch</option>
+                    <option>Balapur Branch (sri amrutha Lakshmi dental)</option>
                   </select>
                 </div>
                 <div className="flex flex-col">
@@ -234,7 +234,7 @@ export default function BookAppointment() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { label: 'Location I', name: 'Nagole Branch', addr: 'Gurukrupa Building, 1st Floor, Alkapuri X Road, Nagole.' },
-                { label: 'Location II', name: 'Balapur Branch', addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur.' },
+                { label: 'Location II', name: 'Balapur Branch (sri amrutha Lakshmi dental)', addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur.' },
               ].map(({ label, name, addr }) => (
                 <div key={name} className="bg-surface-container-lowest p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                   <span className="text-secondary font-bold text-[10px] uppercase tracking-widest block mb-2">{label}</span>

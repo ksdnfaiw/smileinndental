@@ -368,7 +368,7 @@ export default function Home() {
               {[
                 { n: '01', t: 'Led by MDS Experts', d: 'Your treatments are handled by highly qualified Master of Dental Surgery specialists to ensure the best care.' },
                 { n: '02', t: 'Advanced Digital Scans', d: 'Equipped with top-tier 3D scanning and digital X-rays to perfectly plan your treatment without guesswork.' },
-                { n: '03', t: '100% Painless Treatments', d: 'We use modern numbing techniques to ensure you feel absolutely no pain or stress during your visit.' },
+                { n: '03', t: 'Painless Treatments', d: 'We use modern numbing techniques to ensure you feel absolutely no pain or stress during your visit.' },
                 { n: '04', t: 'Simple & Transparent', d: 'No hidden costs and no confusing medical terms. We explain everything clearly before we begin.' },
               ].map(({ n, t, d }) => (
                 <div key={n} className="flex gap-6 group">
@@ -527,7 +527,7 @@ export default function Home() {
             },
             {
               name: 'Balapur Branch', 
-              addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur.',
+              addr: 'Basupalli Gowra Reddy Complex, RCI Road, Balapur (sri amrutha laxmi dental hospital)',
               status: 'OPEN ALL 7 DAYS',
               mapUrl: 'https://maps.google.com/?q=Sri+Amrutha+Laxmi+Dental+Balapur'
             },

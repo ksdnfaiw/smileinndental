@@ -9,43 +9,64 @@ export default function Treatments() {
       title: 'General Dentistry',
       path: '/treatments/general-dentistry',
       icon: 'dentistry',
-      desc: 'Foundational care for a lifetime of health.',
-      features: ['Regular Exams', 'Painless Fillings', 'Professional Cleaning']
-    },
-    {
-      title: 'Orthodontics',
-      path: '/treatments/orthodontics',
-      icon: 'straighten',
-      desc: 'Master-level alignment for all ages.',
-      features: ['Invisalign®', 'Clear Braces', 'Jaw Correction']
+      desc: 'Foundational care including cleanings, fillings, and preventative diagnostics.',
+      features: ['Digital Checkups', 'Painless Cleaning', 'Aesthetic Fillings']
     },
     {
       title: 'Emergency Care',
       path: '/treatments/emergency-care',
       icon: 'emergency',
-      desc: 'Immediate relief for acute pain and trauma.',
-      features: ['Pain Relief', 'Broken Teeth', 'Trauma Care']
+      desc: 'Immediate relief for acute pain, broken teeth, or dental trauma.',
+      features: ['Acute Pain Relief', 'Trauma Management', 'Broken Teeth']
     },
     {
       title: 'Cosmetic Dentistry',
       path: '/treatments/cosmetic-dentistry',
-      icon: 'health_and_safety',
-      desc: 'Artistic smile design and restoration.',
-      features: ['Teeth Whitening', 'Porcelain Veneers', 'Smile Makeovers']
+      icon: 'flare',
+      desc: 'Enhance your aesthetics through whitening, veneers, and smile makeovers.',
+      features: ['Crowns & Bridges', 'Smile Makeovers', 'BPS Dentures']
     },
     {
       title: 'Oral Surgery',
       path: '/treatments/oral-surgery',
+      icon: 'biotech',
+      desc: 'Expert surgical interventions for extractions, cysts, and facial trauma.',
+      features: ['Wisdom Tooth Removal', 'TMJ Disorders', 'Cyst Removal']
+    },
+    {
+      title: 'Laser Dentistry',
+      path: '/treatments/laser-dentistry',
       icon: 'medical_services',
-      desc: 'Precision surgical care by MDS experts.',
-      features: ['Dental Implants', 'Wisdom Teeth', 'Bone Grafting']
+      desc: 'Minimally invasive dental care using advanced laser technology.',
+      features: ['Laser Gum Bleaching', 'Flap Surgery', 'Painless Procedures']
+    },
+    {
+      title: 'Orthodontics',
+      path: '/treatments/orthodontics',
+      icon: 'align_horizontal_center',
+      desc: 'Modern orthodontic solutions to align smiles for all ages.',
+      features: ['Clear Aligners', 'Traditional Braces', 'MDS Supervision']
     },
     {
       title: 'Pediatric Care',
       path: '/treatments/pediatric-care',
-      icon: 'child_care',
-      desc: 'Gentle care for our youngest patients.',
-      features: ['Cavity Prevention', 'Growth Monitoring', 'Friendly Environment']
+      icon: 'family_restroom',
+      desc: 'Gentle, friendly dental care specialized for our youngest patients.',
+      features: ['Conscious Sedation', 'Fluoride Treatment', 'Child-Friendly']
+    },
+    {
+      title: 'Oral Cancer',
+      path: '/treatments/oral-cancer',
+      icon: 'health_and_safety',
+      desc: 'Advanced screening and early detection of oral malignancies.',
+      features: ['Cancer Screening', 'Early Detection', 'Specialist Review']
+    },
+    {
+      title: 'Esthetic Procedures',
+      path: '/treatments/esthetic-procedures',
+      icon: 'auto_awesome',
+      desc: 'Aesthetic enhancements for a harmonious and beautiful facial appearance.',
+      features: ['Smile Enhancement', 'Facial Harmony', 'Modern Esthetics']
     }
   ];
 
@@ -129,7 +150,7 @@ export default function Treatments() {
               {[
                 { n: '5+', l: 'MDS Experts' },
                 { n: '1000+', l: 'Happy Smiles' },
-                { n: '100%', l: 'Painless Care' },
+                { n: 'Painless', l: 'Procedures' },
                 { n: '2', l: 'Elite Branches' }
               ].map(stat => (
                 <div key={stat.l}>

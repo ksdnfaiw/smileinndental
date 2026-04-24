@@ -4,114 +4,137 @@ import SEO from '../components/SEO';
 export default function CosmeticDentistry() {
   const navigate = useNavigate();
 
-  const treatments = [
-    { title: 'Signature Whitening', icon: 'flare', d: 'In-office professional whitening that can brighten your smile by up to 8 shades in a single session.' },
-    { title: 'Porcelain Veneers', icon: 'auto_awesome', d: 'Custom-crafted, ultra-thin ceramic shells that cover imperfections for a Hollywood-ready smile.' },
-    { title: 'Digital Smile Design', icon: 'view_in_ar', d: 'Advanced software mapping that allows you to "trial" your new smile before any treatment begins.' },
-    { title: 'Composite Bonding', icon: 'brush', d: 'An artistic, non-invasive way to repair chips, gaps, or discoloration using high-density resin.' }
+  const services = [
+    { 
+      title: 'Crowns and Bridges', 
+      icon: 'architecture', 
+      desc: 'Durable, natural-looking porcelain or ceramic crowns custom-designed to protect and perfectly restore the aesthetics of your teeth.',
+      image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Complete Dentures', 
+      icon: 'settings_backup_restore', 
+      desc: 'Expertly crafted full or partial dentures that restore your ability to eat, speak, and smile with absolute confidence.',
+      image: 'https://images.unsplash.com/photo-1593059080506-517a69fc439d?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'BPS Dentures', 
+      icon: 'star', 
+      desc: 'Premium bio-functional prosthetic system (BPS) dentures offering superior fit, function, and aesthetic quality.',
+      image: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Full Mouth Rehabilitation', 
+      icon: 'flare', 
+      desc: 'Comprehensive smile restoration combining function, aesthetics, and long-term comfort using MDS-level clinical precision.',
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop'
+    }
   ];
 
   return (
     <div className="pt-0">
       <SEO 
-        title="Cosmetic Dentist Hyderabad | Smile Makeovers & Veneers · Smile Inn"
-        description="Transform your smile with Smile Inn Dental Clinics. Aesthetic expert cosmetic dentistry including Porcelain Veneers and Professional Whitening in Nagole and Balapur."
-        keywords="cosmetic dentistry Hyderabad, teeth whitening Nagole, porcelain veneers Hyderabad, smile makeover Balapur"
+        title="Cosmetic Dentistry & Smile Makeovers · Smile Inn"
+        description="Transform your smile with Dr. Chandrakanth MDS at Smile Inn Dental Clinics. Porcelain veneers, whitening, and full mouth rehabilitation in Hyderabad."
+        keywords="cosmetic dentist Hyderabad, smile makeover Nagole, teeth whitening Balapur, porcelain veneers Hyderabad, full mouth rehab"
         canonicalPath="/treatments/cosmetic-dentistry"
       />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-primary-container">
-        <div className="absolute inset-0 z-0 opacity-20">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" 
-            alt="Cosmetic dentistry treatment room at Smile Inn Dental Clinics, Hyderabad" 
+            src="https://images.unsplash.com/photo-1609902726285-00668009f004?q=80&w=2070&auto=format&fit=crop" 
+            alt="Cosmetic dental aesthetics" 
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-pink-900/40 backdrop-blur-[2px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight">
-            Confidence <br /><span className="italic text-secondary">Redefined.</span>
+          <span className="text-secondary-container font-bold tracking-[0.2em] uppercase mb-4 block animate-fade-in">Led by Dr. Chandrakanth MDS</span>
+          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
+            Artistic <br /><span className="italic text-pink-200">Perfection.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-on-primary-container opacity-90 max-w-2xl mx-auto">
-            Experience the harmony of medicine and art. We design smiles that are naturally radiant and uniquely yours.
+          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
+            Designing confident smiles through a blend of clinical mastery and artistic vision.
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-6xl font-headline text-primary">Smile Artistry.</h2>
-            <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
-              At Smile Inn, cosmetic dentistry is more than just a procedure—it's a transformation. Led by **Dr. Sravani (MDS)**, our aesthetic studio specializes in creating balanced, natural-looking smiles that enhance your facial features. 
-              We combine the latest porcelain materials with digital mapping technology to ensure 100% predictability in your smile journey.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
-              {treatments.map(t => (
-                <div key={t.title} className="p-8 rounded-3xl bg-surface-container-low hover:bg-white transition-all duration-300 shadow-sm hover:shadow-xl">
-                  <div className="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center text-primary mb-6">
-                    <span className="material-symbols-outlined text-3xl">{t.icon}</span>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">The Science of Beauty.</h2>
+          <p className="text-xl text-on-surface-variant leading-relaxed">
+            Led by **Dr. Chandrakanth MDS**, our cosmetic department specializes in restorative artistry. We don't just fix teeth; we reconstruct confidence using the global Gold Standard in dental aesthetics.
+          </p>
+        </div>
+
+        {/* Detailed Services */}
+        <div className="space-y-32">
+          {services.map((s, i) => (
+            <div key={s.title} className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}>
+              <div className="flex-1 space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-pink-100 flex items-center justify-center text-pink-700 shadow-lg shadow-pink-200/50">
+                    <span className="material-symbols-outlined text-3xl">{s.icon}</span>
                   </div>
-                  <h4 className="font-bold text-xl text-primary mb-3">{t.title}</h4>
-                  <p className="text-sm text-on-surface-variant leading-relaxed opacity-80">{t.d}</p>
+                  <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative group">
-              <div className="rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl relative z-10">
-                <img 
-                    src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Smile transformation result at Smile Inn cosmetic dentistry, Hyderabad" 
+                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                  {s.desc}
+                </p>
+                <button 
+                  onClick={() => navigate('/book')}
+                  className="px-8 py-4 bg-pink-700 text-white rounded-xl font-bold hover:shadow-xl transition-all"
+                >
+                  Schedule Smile Assessment
+                </button>
+              </div>
+              <div className="flex-1 w-full">
+                <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group border-b-8 border-pink-700/20">
+                  <img 
+                    src={s.image} 
+                    alt={s.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                  />
+                </div>
               </div>
-              <div className="absolute -bottom-10 -right-10 bg-secondary p-12 rounded-[3rem] shadow-xl max-w-xs hidden md:block z-20">
-                <p className="text-3xl font-headline text-white italic">"A smile is the most powerful accessory you can ever wear."</p>
-                <p className="text-xs text-white/70 mt-6 tracking-widest font-bold uppercase">— Dr. Sravani</p>
-              </div>
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Before/After Promo Area */}
-      <section className="py-24 bg-surface-container-low relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center">
-            <h2 className="text-4xl md:text-6xl font-headline text-primary mb-20 leading-tight">Your New Smile <br /><span className="text-secondary italic">Begins with a Vision.</span></h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                {[
-                    { n: 'Consultation', d: 'Expert analysis of your facial profile and dental health.', i: 'person_search' },
-                    { n: 'Digital Design', d: '3D mapping of your future smile using advanced AI.', i: 'camera' },
-                    { n: 'Transformation', d: 'Precision execution by our master MDS clinicians.', i: 'brush' }
-                ].map(s => (
-                    <div key={s.n} className="space-y-6">
-                        <div className="w-20 h-20 bg-white shadow-xl rounded-full flex items-center justify-center mx-auto text-primary">
-                            <span className="material-symbols-outlined text-4xl">{s.i}</span>
-                        </div>
-                        <h5 className="text-2xl font-headline text-primary">{s.n}</h5>
-                        <p className="text-on-surface-variant opacity-80 leading-relaxed max-w-xs mx-auto">{s.d}</p>
-                    </div>
-                ))}
-            </div>
+      {/* Quotation */}
+      <section className="py-24 bg-surface-container-low overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-pink-200/20 blur-3xl rounded-full"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center">
+            <blockquote className="space-y-8">
+                <span className="material-symbols-outlined text-6xl text-pink-200">format_quote</span>
+                <p className="text-3xl md:text-5xl font-headline text-primary leading-tight italic">
+                  "A perfect smile is the ultimate expression of health and happiness. We design every rehabilitation to be as unique as the patient."
+                </p>
+                <cite className="block text-secondary font-bold tracking-[0.2em] uppercase not-italic">
+                  — Dr. Chandrakanth MDS, Clinical Director
+                </cite>
+            </blockquote>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-primary text-white rounded-[4rem] p-12 md:p-24 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-white/5 opacity-50"></div>
-            <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-4xl md:text-7xl font-headline mb-10 leading-tight">Ready for Your <br />Dream Smile?</h2>
-                <p className="text-xl md:text-2xl text-on-primary-container mb-12 opacity-90 leading-relaxed">
-                    Book a Cosmetic Consultation and see how Digital Smile Design can change your life.
+        <div className="bg-primary text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-pink-900/20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#ff8fb133,_transparent)]"></div>
+            <div className="relative z-10 max-w-2xl mx-auto">
+                <h2 className="text-4xl md:text-6xl font-headline mb-8">Your Journey to a Perfect Smile Starts Here</h2>
+                <p className="text-xl text-on-primary-container mb-12 opacity-90">
+                    Join thousands of patients who have transformed their confidence with our specialist-led cosmetic treatments.
                 </p>
                 <button 
                   onClick={() => navigate('/book')}
-                  className="px-16 py-6 bg-secondary text-white rounded-3xl font-bold text-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                  className="px-12 py-5 bg-pink-500 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  Start Your Transformation
+                  Book My Smile Consultation
                 </button>
             </div>
         </div>

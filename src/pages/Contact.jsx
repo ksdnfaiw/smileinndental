@@ -55,12 +55,14 @@ export default function Contact() {
       addr: 'Gurukrupa Building, 1st Floor, Alkapuri X Road,\nNagole, Hyderabad - 500068',
       phone: '+91 91773 17253', hours: 'Mon – Sun: 10:00 AM – 8:30 PM',
       email: 'smileinndentalclinics@gmail.com',
+      map: 'https://maps.google.com/?q=Smile+Inn+Dental+Nagole'
     },
     {
       name: 'Sri Amrutha Laxmi Dental Hospital — Balapur', color: 'secondary',
       addr: 'Basupalli Gowra Reddy Complex, RCI Road,\nBalapur, Hyderabad - 500097',
-      phone: '+91 91773 17253', hours: 'Mon – Sat: 10:30 AM – 9:00 PM',
+      phone: '+91 90637 17253', hours: 'Mon – Sat: 10:30 AM – 9:00 PM',
       email: 'smileinndentalclinics@gmail.com',
+      map: 'https://maps.google.com/?q=Sri+Amrutha+Laxmi+Dental+Balapur'
     },
   ];
 
@@ -110,7 +112,7 @@ export default function Contact() {
                       </div>
                       <div className="flex items-center gap-4">
                         <span className={`material-symbols-outlined text-${color}`}>call</span>
-                        <a href="tel:+919177317253" className="text-on-surface-variant font-bold hover:underline">{phone}</a>
+                        <a href={`tel:${phone.replace(/\s+/g, '')}`} className="text-on-surface-variant font-bold hover:underline">{phone}</a>
                       </div>
                       <div className="flex items-center gap-4">
                         <span className={`material-symbols-outlined text-${color}`}>schedule</span>
@@ -121,6 +123,13 @@ export default function Contact() {
                         <a href={`mailto:${email}`} className="text-on-surface-variant hover:underline">{email}</a>
                       </div>
                     </div>
+                    <button 
+                      onClick={() => window.open(branches.find(b => b.name === name).map, '_blank')}
+                      className={`mt-8 w-full py-3 border-2 border-${color} text-${color} font-bold rounded-xl hover:bg-${color} hover:text-white transition-all duration-300 flex items-center justify-center gap-2`}
+                    >
+                      <span className="material-symbols-outlined">map</span>
+                      View on Google Maps
+                    </button>
                   </div>
                 </div>
               ))}
@@ -154,18 +163,18 @@ export default function Contact() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPBuunU3Vzur89mVeRnPT9K22VX0nlevqKPh4exAU7QKaDqeOlah4r4ZxBerV2A9QPadVhqnlcmv0t5lVkEqbo2npjbKVScp9bu2DNA-JncNg0lbNJ1PboT5uVuOLkZgFJJCYl7mV6yQ4t9VFPXsi1pfPzPrAe3PJ_ZU8eVOqk1z2_sFyYqusSaiEuVB0gjYI6TByFllcGzMbTnbHgfasA8k58IYOiCNzlZKeYdP_HJJ9j00XUsianS-b5giZ_j--X_7n2P3UU9bg"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex gap-4">
+                <div className="flex flex-col gap-4 w-full max-w-xs px-6">
                   <button
                     onClick={() => window.open('https://maps.google.com/?q=Smile+Inn+Dental+Nagole', '_blank')}
-                    className="btn-primary flex-1 py-3 text-sm"
+                    className="btn-primary w-full py-4 text-sm justify-center"
                   >
-                    View on Maps
+                    Nagole Branch Map
                   </button>
-                  <button 
-                    onClick={() => window.location.href = 'tel:+919177317253'}
-                    className="btn-secondary px-4 border-2 border-outline !bg-transparent"
+                  <button
+                    onClick={() => window.open('https://maps.google.com/?q=Sri+Amrutha+Laxmi+Dental+Balapur', '_blank')}
+                    className="btn-secondary w-full py-4 text-sm justify-center !bg-white !text-primary"
                   >
-                    <span className="material-symbols-outlined">call</span>
+                    Balapur Branch Map
                   </button>
                 </div>
               </div>

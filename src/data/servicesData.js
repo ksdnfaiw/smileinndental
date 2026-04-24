@@ -10,31 +10,34 @@ export const colorMap = {
 
 export const categories = [
   {
-    title: 'Dental Implants',
-    slug: 'dental-implants',
-    icon: 'settings_backup_restore',
-    shortDesc: 'Permanent, life-like solutions for missing teeth using global protocols.',
+    title: 'General Dentistry',
+    slug: 'general-dentistry',
+    icon: 'dentistry',
+    shortDesc: 'Foundational care including cleanings, fillings, and preventative diagnostics.',
     color: 'emerald',
-    count: '5 treatments',
+    count: '6 treatments',
     services: [
-      { title: 'Immediate Implants', desc: 'Same-day implant placement following an extraction for a faster transition.' },
-      { title: 'Conventional Implants', desc: 'Traditional multi-stage implants for maximum long-term stability and bone health.' },
-      { title: 'Pterygoid Implants', desc: 'Advanced solutions for severe upper jaw bone loss, avoiding complex sinus lifts.' },
-      { title: 'Zygomatic Implants', desc: 'Specialized cheekbone implants for patients with significant maxillary bone atrophy.' },
-      { title: 'Implant Supported Dentures', desc: 'Full-arch stability using a few strategically placed implants to secure dentures.' }
+      { title: 'Digital Checkups', desc: 'Precise diagnosis using ultra-low radiation digital X-rays and intraoral HD cameras.' },
+      { title: 'Pain-Free Cleaning', desc: 'Ultrasonic scaling and professional polishing to remove plaque and restore brightness.' },
+      { title: 'Aesthetic Fillings', desc: 'Tooth-colored composite resins that restore strength while blending perfectly.' },
+      { title: 'Root Canal Treatment', desc: 'Expert endodontic care using advanced rotary systems for a faster, pain-free experience.' },
+      { title: 'Simple Extractions', desc: 'Quick, painless tooth removal of a damaged or decayed tooth using safe techniques.' },
+      { title: 'Gum Care', desc: 'Comprehensive prevention and treatment of gum diseases for optimal oral health.' }
     ]
   },
   {
-    title: 'Braces & Aligners',
-    slug: 'braces-and-aligners',
-    icon: 'align_horizontal_center',
-    shortDesc: 'Modern orthodontic solutions to straighten smiles for adults and children.',
-    color: 'blue',
-    count: '3 treatments',
+    title: 'Emergency Care',
+    slug: 'emergency-care',
+    icon: 'emergency',
+    shortDesc: 'Immediate relief for acute pain, broken teeth, or dental trauma.',
+    color: 'rose',
+    count: '5 treatments',
     services: [
-      { title: 'Clear Aligners', desc: 'Virtually invisible removable trays specialized for discreet smile correction.' },
-      { title: 'Traditional Braces', desc: 'Expertly managed metal or ceramic braces for precise teeth alignment.' },
-      { title: 'Invisalign Specialists', desc: 'Advanced digital planning and execution using the global standard in clear aligners.' }
+      { title: 'Severe Tooth / Jaw Pain', desc: 'Quick, pain-relieving treatments to restore comfort and oral health.' },
+      { title: 'Bleeding / Injury to Mouth', desc: 'Immediate, expert care for oral injuries with a focus on comfort and rapid healing.' },
+      { title: 'Broken or Chipped Teeth', desc: 'Quick and effective care to repair broken teeth and bring back your smile.' },
+      { title: 'Dental / Jaw Trauma', desc: 'Advanced emergency treatment to manage injuries with comfort and faster recovery.' },
+      { title: 'Teeth Avulsion', desc: 'Immediate expert care to preserve and reimplant avulsed teeth with precision.' }
     ]
   },
   {
@@ -45,67 +48,90 @@ export const categories = [
     color: 'pink',
     count: '4 treatments',
     services: [
-      { title: 'Laser Teeth Whitening', desc: 'Professional-grade whitening using laser technology for instant, radiant results.' },
-      { title: 'Porcelain Veneers', desc: 'Thin ceramic shells custom-crafted to perfect your tooth shape, color, and size.' },
-      { title: 'Smile Rehabilitation', desc: 'Comprehensive aesthetic redesign of your smile to match your facial features.' },
-      { title: 'Facial Aesthetics', desc: 'Subtle enhancements that complement your dental work for a harmonious appearance.' }
+      { title: 'Crowns & Bridges', desc: 'Durable, natural-looking porcelain or ceramic crowns to protect and restore teeth.' },
+      { title: 'Complete Dentures', desc: 'Classic, custom-fitted removable dentures to restore full chewing functionality.' },
+      { title: 'BPS Dentures', desc: 'Advanced dentures with precise fit offering enhanced stability, function, and esthetics.' },
+      { title: 'Full Mouth Rehabilitation', desc: 'Comprehensive smile restoration combining function and aesthetics with MDS precision.' }
     ]
   },
   {
-    title: 'Restorative & General',
-    slug: 'restorative-and-general',
-    icon: 'architecture',
-    shortDesc: 'From painless cleanings to root canals, we restore your oral health.',
+    title: 'Oral Surgery',
+    slug: 'oral-surgery',
+    icon: 'biotech',
+    shortDesc: 'Expert surgical interventions for extractions, cysts, and facial trauma.',
     color: 'amber',
     count: '6 treatments',
     services: [
-      { title: 'Root Canal Treatment', desc: 'Seamless, painless RCT using advanced rotary systems and MDS expertise.' },
-      { title: 'Aesthetic Fillings', desc: 'Tooth-colored composite resins that restore strength while blending perfectly.' },
-      { title: 'Pain-Free Cleaning', desc: 'Professional scaling and polishing to remove plaque and restore brightness.' },
-      { title: 'Crowns & Bridges', desc: 'Durable, natural-looking porcelain or ceramic crowns to protect damaged teeth.' },
-      { title: 'Complete Dentures', desc: 'Classic, custom-fitted removable dentures to restore full chewing functionality.' },
-      { title: 'Emergency Care', desc: 'Same-day attention for acute pain, trauma, or unexpected dental issues.' }
-    ]
-  },
-  {
-    title: 'Surgical Dentistry',
-    slug: 'surgical-dentistry',
-    icon: 'biotech',
-    shortDesc: 'Expert surgical interventions for extractions and facial trauma.',
-    color: 'rose',
-    count: '5 treatments',
-    services: [
       { title: 'Wisdom Tooth Removal', desc: 'Precision surgical extraction of impacted or problematic wisdom teeth.' },
-      { title: 'Tooth Extractions', desc: 'Minimally invasive removal of non-restorable teeth with zero discomfort.' },
-      { title: 'Laser Gum Surgery', desc: 'Advanced soft tissue management using lasers for faster, bloodless healing.' },
+      { title: 'TMJ Disorders', desc: 'Diagnosis and management of temporomandibular joint disorders affecting function.' },
+      { title: 'Oral Cysts & Tumors', desc: 'Minimally invasive treatments for safe removal and faster recovery.' },
+      { title: 'Dental Trauma Management', desc: 'Specialized care for complex injuries to the teeth and supporting structures.' },
       { title: 'Jaw Lesion Surgery', desc: 'Specialist diagnosis and removal of cysts or lesions with aesthetic precision.' },
-      { title: 'TMJ Management', desc: 'Expert diagnosis and relief for jaw pain, clicking, and joint dysfunction.' }
+      { title: 'Surgical Extractions', desc: 'Complex removal of non-restorable teeth handled with surgical expertise.' }
     ]
   },
   {
-    title: 'Child Dentistry',
-    slug: 'child-dentistry',
-    icon: 'family_restroom',
-    shortDesc: 'Gentle, friendly dental care specialized for our youngest patients.',
-    color: 'indigo',
-    count: '2 treatments',
-    services: [
-      { title: 'Pediatric Care', desc: 'Fun, relaxing checkups and cleanings designed to build positive habits.' },
-      { title: 'Habit Counselling', desc: 'Expert guidance for thumb-sucking, mouth breathing, or other child habits.' }
-    ]
-  },
-  {
-    title: 'Technology & Diagnostics',
-    slug: 'technology-and-diagnostics',
-    icon: 'biotech',
-    shortDesc: 'State-of-the-art diagnostic digital imaging and laser technology.',
+    title: 'Laser Dentistry',
+    slug: 'laser-dentistry',
+    icon: 'medical_services',
+    shortDesc: 'Minimally invasive dental care using advanced laser technology.',
     color: 'teal',
     count: '4 treatments',
     services: [
-      { title: 'Digital X-rays', desc: 'Instant high-resolution imaging with 90% less radiation than traditional film.' },
-      { title: '3D Intraoral Scanners', desc: 'Digital impressions for perfectly fitting crowns and aligners with zero mess.' },
-      { title: 'Dental Lasers', desc: 'Modern technology for painless surgeries and accelerated healing of tissues.' },
-      { title: 'Intraoral HD Cameras', desc: 'See what we see with high-definition tours of your teeth and gums.' }
+      { title: 'Laser Gum Bleaching', desc: 'Advanced laser gum depigmentation for a brighter, more even and aesthetic smile.' },
+      { title: 'Flap Surgery', desc: 'Advanced laser-assisted gum surgery for precise treatment and faster healing.' },
+      { title: 'Photo Biomodulation', desc: 'Low-level light therapy used to promote tissue healing and reduce inflammation.' },
+      { title: 'Lesion Screening', desc: 'Advanced screening for early detection of oral changes, ensuring timely care.' }
+    ]
+  },
+  {
+    title: 'Orthodontics',
+    slug: 'orthodontics',
+    icon: 'align_horizontal_center',
+    shortDesc: 'Modern orthodontic solutions to align smiles for all ages.',
+    color: 'blue',
+    count: '2 treatments',
+    services: [
+      { title: 'Clear Aligners (Invisalign)', desc: 'Virtually invisible removable trays specialized for discreet smile alignment.' },
+      { title: 'Traditional Braces', desc: 'High-precision metal braces for reliable, effective, and beautifully aligned smiles.' }
+    ]
+  },
+  {
+    title: 'Pediatric Care',
+    slug: 'pediatric-care',
+    icon: 'family_restroom',
+    shortDesc: 'Gentle, friendly dental care specialized for our youngest patients.',
+    color: 'indigo',
+    count: '4 treatments',
+    services: [
+      { title: 'Conscious Sedation', desc: 'Advanced and safe sedation methods to ensure a relaxed, child-friendly visit.' },
+      { title: 'Fluoride Treatment', desc: 'Topical fluoride application to enhance enamel resistance and prevent caries.' },
+      { title: 'Pulpectomy / Pulpotomy', desc: 'Vital and non-vital pulp therapy procedures to maintain primary tooth health.' },
+      { title: 'Early Ortho Evaluation', desc: 'Early check-up to monitor teeth and ensure a healthy, straight smile.' }
+    ]
+  },
+  {
+    title: 'Oral Cancer',
+    slug: 'oral-cancer',
+    icon: 'health_and_safety',
+    shortDesc: 'Advanced screening and early detection of oral malignancies.',
+    color: 'rose',
+    count: '3 treatments',
+    services: [
+      { title: 'Oral Cancer Screening', desc: 'Advanced screening for early detection of oral changes and preventive care.' },
+      { title: 'Oral Cysts & Tumors', desc: 'Careful evaluation to detect and understand unusual growths in the mouth early.' },
+      { title: 'Precancerous Conditions', desc: 'Advanced care for early detection and management of potentially harmful changes.' }
+    ]
+  },
+  {
+    title: 'Esthetic Procedures',
+    slug: 'esthetic-procedures',
+    icon: 'auto_awesome',
+    shortDesc: 'Aesthetic enhancements for a harmonious and beautiful facial appearance.',
+    color: 'pink',
+    count: '1 treatment',
+    services: [
+      { title: 'Smile Enhancements', desc: 'Customized aesthetic procedures to complement your dental work and facial features.' }
     ]
   }
 ];

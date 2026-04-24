@@ -22,8 +22,8 @@ export default function About() {
   return (
     <div className="pt-0">
       <SEO
-        title="About Us · 10 Years of Specialist Dental Care · Smile Inn"
-        description="Meet the team behind Smile Inn — MDS-qualified dentists serving Hyderabad for over 10 years with honest, advanced, and painless dental care."
+        title="About Us · 13+ Years of Specialist Dental Care · Smile Inn"
+        description="Meet the team behind Smile Inn — MDS-qualified dentists serving Hyderabad for over 13+ years with honest, advanced, and painless dental care."
         keywords="about Smile Inn Dental, dentist Hyderabad, MDS dental specialists Hyderabad, best dental team Nagole"
         canonicalPath="/about"
       />
@@ -31,9 +31,8 @@ export default function About() {
       <section className="min-h-[calc(100vh-80px)] flex flex-col md:flex-row overflow-hidden">
         <div className="w-full md:w-1/2 bg-primary-container flex items-center px-8 md:px-20 py-24 md:py-32">
           <div className="max-w-xl">
-            <span className="text-secondary tracking-widest text-sm font-bold uppercase mb-4 block">Est. 2014</span>
             <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight mb-10">
-              10 Years of Trusted Smiles.
+              13+ Years of Trusted Smiles.
             </h1>
             <div className="w-24 h-1 bg-secondary rounded-full mb-10"></div>
             <p className="text-on-primary-container text-2xl leading-relaxed opacity-90">
@@ -60,7 +59,7 @@ export default function About() {
             <h2 className="text-5xl font-serif text-primary italic">Our Story</h2>
             <div className="space-y-8 text-xl leading-relaxed text-slate-700">
               <p>
-                Founded in 2014, Smile Inn Dental Clinics began with a simple vision: to provide the highest quality dental care in a comfortable, relaxed environment. For over 10 years, we have been the go-to dental clinic in Hyderabad, ensuring every patient receives painless and expert treatments.
+                Smile Inn Dental Clinics began with a simple vision: to provide the highest quality dental care in a comfortable, relaxed environment. For over 13+ years, we have been the go-to dental clinic in Hyderabad, ensuring every patient receives painless and expert treatments.
               </p>
               <blockquote className="border-l-4 border-secondary pl-10 py-6 my-12">
                 <p className="text-3xl font-serif italic text-primary leading-tight">
@@ -68,10 +67,10 @@ export default function About() {
                 </p>
               </blockquote>
               <p>
-                Over the last decade, we have expanded our trusted services to Nagole and Balapur. Our team of highly qualified MDS doctors specialize in everything from routine checkups and root canals to advanced dental implants and braces.
+                Over the last 13+ years, we have expanded our trusted services to Nagole and Balapur. Our team of highly qualified MDS doctors specialize in everything from routine checkups and root canals to advanced dental implants and braces.
               </p>
               <p>
-                Today, Smile Inn is known for complete transparency, affordable pricing, and 100% painless procedures. We use the latest 3D imaging and modern technology so that you get the best dental care possible without the fear usually associated with visiting a dentist.
+                Today, Smile Inn is known for complete transparency, affordable pricing, and painless procedures. We use the latest 3D imaging and modern technology so that you get the best dental care possible without the fear usually associated with visiting a dentist.
               </p>
             </div>
           </div>

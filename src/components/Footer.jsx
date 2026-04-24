@@ -12,7 +12,8 @@ export default function Footer() {
           <img 
             src={logo} 
             alt="Smile Inn Dental Clinics Logo" 
-            className="h-10 w-auto object-contain"
+            className="h-20 w-auto object-contain mix-blend-screen"
+            style={{ filter: 'invert(1) brightness(1.5)' }}
           />
           <p className="text-slate-200 text-lg leading-relaxed opacity-90">
             Redefining dental health through specialist-led artistry and advanced clinical protocols.
@@ -20,13 +21,31 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <a 
-              href="https://www.instagram.com/smileinn.dentalclinic?igsh=bmQ4MHozd3F0b2Rk&utm_source=qr" 
+              href="https://instagram.com/smileinndentalclinics" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Follow Smile Inn on Instagram"
-              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-lime-600 transition-colors cursor-pointer"
+              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-colors cursor-pointer"
             >
-              <span className="material-symbols-outlined text-lg">photo_camera</span>
+              <i className="bi bi-instagram text-lg"></i>
+            </a>
+            <a 
+              href="https://facebook.com/smileinndentalclinics" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Follow Smile Inn on Facebook"
+              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors cursor-pointer"
+            >
+              <i className="bi bi-facebook text-lg"></i>
+            </a>
+            <a 
+              href="https://youtube.com/@smileinndentalclinics" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Follow Smile Inn on YouTube"
+              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors cursor-pointer"
+            >
+              <i className="bi bi-youtube text-lg"></i>
             </a>
           </div>
         </div>

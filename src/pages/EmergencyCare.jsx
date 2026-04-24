@@ -5,92 +5,130 @@ export default function EmergencyCare() {
   const navigate = useNavigate();
 
   const services = [
-    { title: 'Acute Pain Relief', icon: 'pain', desc: 'Immediate diagnosis and intervention for severe toothaches and abscesses.' },
-    { title: 'Broken Teeth', icon: 'broken_image', desc: 'Rapid restoration of fractured or knocked-out teeth to save your natural smile.' },
-    { title: 'Swelling & Trauma', icon: 'emergency', desc: 'Urgent care for facial swelling, gum injuries, and clinical dental trauma.' },
-    { title: 'Same-Day Priority', icon: 'schedule', desc: 'We reserve emergency slots every day to ensure you get care when it matters most.' }
+    { 
+      title: 'Severe Tooth / Jaw Pain', 
+      icon: 'priority_high', 
+      desc: 'Immediate clinical relief for acute dental pain, pulpitis, or infections. We prioritize your comfort above all else.',
+      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Bleeding / Injury to Mouth', 
+      icon: 'medical_services', 
+      desc: 'Immediate, expert care for oral injuries with a focus on comfort and rapid healing. Addressing bleeding and soft tissue trauma.',
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Broken or Chipped Teeth', 
+      icon: 'broken_image', 
+      desc: 'Quick and effective care to repair broken or chipped teeth and bring back your smile using aesthetic restorative techniques.',
+      image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Dental / Jaw Trauma', 
+      icon: 'healing', 
+      desc: 'Advanced emergency treatment to manage injuries with comfort and faster recovery, ensuring long-term structural stability.',
+      image: 'https://images.unsplash.com/photo-1593054914500-2d4822380d6f?q=80&w=2072&auto=format&fit=crop'
+    },
+    { 
+      title: 'Teeth Avulsion', 
+      icon: 'add_task', 
+      desc: 'Immediate expert care to preserve and reimplant avulsed (knocked-out) teeth with precision. Timing is critical for success.',
+      image: 'https://images.unsplash.com/photo-1588776814546-1ffce47267a5?q=80&w=2070&auto=format&fit=crop'
+    }
   ];
 
   return (
     <div className="pt-0">
       <SEO 
         title="Emergency Dental Care Hyderabad · Smile Inn"
-        description="Urgent dental care at Smile Inn Dental Clinics. Immediate relief for tooth pain, broken teeth, and trauma in Nagole and Balapur."
-        keywords="emergency dentist Hyderabad, tooth pain relief Nagole, broken tooth repair Balapur, urgent dental care"
+        description="Immediate relief for dental pain, broken teeth, and jaw trauma at Smile Inn Dental Clinics. Prioritized emergency slots in Nagole and Balapur."
+        keywords="emergency dentist Hyderabad, dental trauma Nagole, tooth pain relief Balapur, broken tooth repair"
         canonicalPath="/treatments/emergency-care"
       />
 
       {/* Hero */}
-      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden bg-[#302682]">
-        <div className="absolute inset-0 z-0 opacity-20">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop" 
-            alt="Emergency dental care at Smile Inn" 
+            src="https://images.unsplash.com/photo-1516549221187-df7d4838bc01?q=80&w=2070&auto=format&fit=crop" 
+            alt="Emergency dental clinic" 
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-error/40 backdrop-blur-[2px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <span className="text-secondary-container font-bold tracking-[0.3em] uppercase text-sm mb-6 block animate-fade-in">Immediate Clinical Response</span>
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight">
-            Emergency <br /><span className="italic text-secondary-fixed-dim">Care.</span>
+          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
+            Immediate <br /><span className="italic text-white">Relief.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-on-primary-container opacity-90 max-w-2xl mx-auto">
-            Prioritized relief for acute pain and dental trauma when you need it most.
+          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
+            Prioritized emergency care for acute pain and trauma. We are here when you need us most.
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-6xl font-headline text-primary">Relief is Just <br />a Call Away.</h2>
-            <p className="text-xl text-on-surface-variant leading-relaxed">
-              Dental emergencies can be stressful and painful. At Smile Inn, our MDS specialists are equipped to handle urgent cases with speed and precision. 
-              From sudden toothaches to clinical trauma, we provide immediate interventions to stabilize your condition and eliminate pain.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
-              {services.map(s => (
-                <div key={s.title} className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-secondary-container flex-shrink-0 flex items-center justify-center text-primary">
-                    <span className="material-symbols-outlined text-2xl">{s.icon}</span>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Urgent Care Specialists.</h2>
+          <p className="text-xl text-on-surface-variant leading-relaxed">
+            Dental emergencies can be stressful. Our team is trained to handle acute pain and trauma with clinical precision and empathetic care, ensuring you get back to comfort as quickly as possible.
+          </p>
+        </div>
+
+        {/* Detailed Services */}
+        <div className="space-y-32">
+          {services.map((s, i) => (
+            <div key={s.title} className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}>
+              <div className="flex-1 space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-error-container/20 flex items-center justify-center text-error shadow-lg">
+                    <span className="material-symbols-outlined text-3xl">{s.icon}</span>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-primary mb-1">{s.title}</h4>
-                    <p className="text-sm text-on-surface-variant leading-relaxed opacity-80">{s.desc}</p>
-                  </div>
+                  <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-              ))}
+                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                  {s.desc}
+                </p>
+                <button 
+                  onClick={() => navigate('/book')}
+                  className="px-8 py-4 bg-error text-white rounded-xl font-bold hover:shadow-xl transition-all"
+                >
+                  Request Emergency Slot
+                </button>
+              </div>
+              <div className="flex-1 w-full">
+                <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group border-4 border-error-container/10">
+                  <img 
+                    src={s.image} 
+                    alt={s.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop" 
-                alt="Urgent dental intervention" 
-                className="w-full h-full object-cover"
-              />
-          </div>
+          ))}
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-[#302682] text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+        <div className="bg-error text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-error/20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#ffffff33,_transparent)]"></div>
             <div className="relative z-10 max-w-2xl mx-auto">
-                <h2 className="text-4xl md:text-6xl font-headline mb-8">In Pain Right Now?</h2>
-                <p className="text-xl text-on-primary-container mb-12 opacity-90">
-                    Don't wait. Call us immediately for priority emergency booking at Nagole or Balapur.
+                <h2 className="text-4xl md:text-6xl font-headline mb-8">In Severe Pain?</h2>
+                <p className="text-xl text-white mb-12 opacity-90">
+                    Call us immediately for a priority emergency appointment. We manage trauma cases with absolute clinical priority.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col md:flex-row gap-6 justify-center">
                   <a 
-                    href="tel:+919100000000"
-                    className="px-12 py-5 bg-secondary text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                    href="tel:+919177317253"
+                    className="px-12 py-5 bg-white text-error rounded-2xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3"
                   >
-                    Call Now
+                    <span className="material-symbols-outlined">call</span> Call +91 91773 17253
                   </a>
                   <button 
                     onClick={() => navigate('/book')}
-                    className="px-12 py-5 border-2 border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
+                    className="px-12 py-5 bg-transparent border-2 border-white text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
                   >
                     Book Online
                   </button>

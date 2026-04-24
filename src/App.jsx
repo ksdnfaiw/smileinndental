@@ -19,6 +19,9 @@ import CategoryDetail from './pages/CategoryDetail';
 import OralSurgery from './pages/OralSurgery';
 import EmergencyCare from './pages/EmergencyCare';
 import PediatricCare from './pages/PediatricCare';
+import LaserDentistry from './pages/LaserDentistry';
+import OralCancer from './pages/OralCancer';
+import EstheticProcedures from './pages/EstheticProcedures';
 import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
@@ -56,6 +59,9 @@ function AnimatedRoutes() {
         <Route path="/treatments/cosmetic-dentistry" element={<CosmeticDentistry />} />
         <Route path="/treatments/oral-surgery" element={<OralSurgery />} />
         <Route path="/treatments/pediatric-care" element={<PediatricCare />} />
+        <Route path="/treatments/laser-dentistry" element={<LaserDentistry />} />
+        <Route path="/treatments/oral-cancer" element={<OralCancer />} />
+        <Route path="/treatments/esthetic-procedures" element={<EstheticProcedures />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

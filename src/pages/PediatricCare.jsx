@@ -5,87 +5,119 @@ export default function PediatricCare() {
   const navigate = useNavigate();
 
   const services = [
-    { title: 'Gentle Cleanings', icon: 'child_care', desc: 'Friendly, careful cleanings designed to keep little smiles healthy and bright.' },
-    { title: 'Sealants & Fluoride', icon: 'security', desc: 'Protective treatments to strengthen young enamel and prevent cavities.' },
-    { title: 'Early Assessment', icon: 'monitoring', desc: 'Monitoring growth and development to ensure proper jaw and tooth alignment.' },
-    { title: 'Fun Education', icon: 'school', desc: 'Teaching children the importance of oral hygiene in an engaging, stress-free way.' }
+    { 
+      title: 'Conscious Sedation', 
+      icon: 'spa', 
+      desc: 'Advanced and safe sedation methods to ensure a relaxed, pain-free, and child-friendly dental visit. Perfect for anxious young patients.',
+      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Early Evaluation', 
+      icon: 'child_friendly', 
+      desc: 'Specialized pediatric exams to monitor tooth development, intercept orthodontic issues early, and establish a foundation for a lifetime of healthy smiles.',
+      image: 'https://images.unsplash.com/photo-1592947945242-69312358628b?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Pulpectomy / Pulpotomy', 
+      icon: 'healing', 
+      desc: 'Vital and non-vital pulp therapy procedures designed specifically to maintain primary tooth function and overall dental health.',
+      image: 'https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?q=80&w=2070&auto=format&fit=crop'
+    },
+    { 
+      title: 'Early Orthodontics Evaluation', 
+      icon: 'visibility', 
+      desc: 'Early check-up to monitor your child\'s teeth and jaw development, ensuring a healthy, straight smile for the future.',
+      image: 'https://images.unsplash.com/photo-1591944030638-1d52a88496d5?q=80&w=2070&auto=format&fit=crop'
+    }
   ];
 
   return (
     <div className="pt-0">
       <SEO 
-        title="Pediatric Dentistry Hyderabad · Smile Inn"
-        description="Gentle children's dentistry at Smile Inn Dental Clinics. Specialized pediatric care to build healthy habits in Hyderabad, Nagole and Balapur."
-        keywords="pediatric dentist Hyderabad, children's dentistry Nagole, kid friendly dentist Balapur, dental care for kids"
+        title="Pediatric Dentistry & Child Dental Care · Smile Inn"
+        description="Gentle, friendly dental care for children at Smile Inn Dental Clinics. Conscious sedation, fluoride treatments, and early ortho evaluation in Hyderabad."
+        keywords="pediatric dentist Hyderabad, child dental care Nagole, fluoride treatment Balapur, conscious sedation for kids"
         canonicalPath="/treatments/pediatric-care"
       />
 
       {/* Hero */}
-      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden bg-[#302682]">
-        <div className="absolute inset-0 z-0 opacity-20">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop" 
-            alt="Pediatric dental care at Smile Inn" 
+            src="https://images.unsplash.com/photo-1588776814546-1ffce47267a5?q=80&w=2070&auto=format&fit=crop" 
+            alt="Child dental care" 
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-indigo-900/40 backdrop-blur-[2px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <span className="text-secondary-container font-bold tracking-[0.3em] uppercase text-sm mb-6 block animate-fade-in">Department of Young Smiles</span>
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight">
-            Pediatric <br /><span className="italic text-secondary-fixed-dim">Care.</span>
+          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
+            Gentle <br /><span className="italic text-indigo-200">Smiles.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-on-primary-container opacity-90 max-w-2xl mx-auto">
-            Specialized, gentle care designed to build a positive lifelong habit for children.
+          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
+            Building positive dental habits for life with compassionate, child-friendly care.
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-6xl font-headline text-primary">Building Happy <br />Dental Habits.</h2>
-            <p className="text-xl text-on-surface-variant leading-relaxed">
-              A child's first experiences at the dentist shape their attitude toward oral health for life. At Smile Inn, we create a fun, welcoming environment where children feel safe and at ease. 
-              Our pediatric experts focus on preventive care and gentle interventions to ensure your child's smile grows strong and healthy.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8">
-              {services.map(s => (
-                <div key={s.title} className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-secondary-container flex-shrink-0 flex items-center justify-center text-primary">
-                    <span className="material-symbols-outlined text-2xl">{s.icon}</span>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Clinical Care with a Gentle Touch.</h2>
+          <p className="text-xl text-on-surface-variant leading-relaxed">
+            We understand that a child's first dental experience shapes their lifelong attitude toward oral health. Our team uses safe, advanced techniques to make every visit fun, relaxing, and effective.
+          </p>
+        </div>
+
+        {/* Detailed Services */}
+        <div className="space-y-32">
+          {services.map((s, i) => (
+            <div key={s.title} className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}>
+              <div className="flex-1 space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-700 shadow-lg shadow-indigo-200/50">
+                    <span className="material-symbols-outlined text-3xl">{s.icon}</span>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-lg text-primary mb-1">{s.title}</h4>
-                    <p className="text-sm text-on-surface-variant leading-relaxed opacity-80">{s.desc}</p>
-                  </div>
+                  <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-              ))}
+                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                  {s.desc}
+                </p>
+                <button 
+                  onClick={() => navigate('/book')}
+                  className="px-8 py-4 bg-indigo-700 text-white rounded-xl font-bold hover:shadow-xl transition-all"
+                >
+                  Book Child Visit
+                </button>
+              </div>
+              <div className="flex-1 w-full">
+                <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group border-b-8 border-indigo-700/20">
+                  <img 
+                    src={s.image} 
+                    alt={s.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop" 
-                alt="Happy child at dental clinic" 
-                className="w-full h-full object-cover"
-              />
-          </div>
+          ))}
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-[#302682] text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+        <div className="bg-primary text-white rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-indigo-900/20">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#a5b4fc33,_transparent)]"></div>
             <div className="relative z-10 max-w-2xl mx-auto">
-                <h2 className="text-4xl md:text-6xl font-headline mb-8">Start Their Journey Right</h2>
+                <h2 className="text-4xl md:text-6xl font-headline mb-8">A Happy Start for Healthy Teeth</h2>
                 <p className="text-xl text-on-primary-container mb-12 opacity-90">
-                    Book a gentle clinical assessment for your child today at Smile Inn.
+                    Schedule your child's first visit today and experience the Smile Inn difference in pediatric care.
                 </p>
                 <button 
                   onClick={() => navigate('/book')}
-                  className="px-12 py-5 bg-secondary text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                  className="px-12 py-5 bg-indigo-500 text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  Schedule Initial Consultation
+                  Book Initial Check-up
                 </button>
             </div>
         </div>
