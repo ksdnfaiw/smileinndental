@@ -120,14 +120,11 @@ export default function Navbar() {
         {/* CTA & Socials */}
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-4 mr-2">
-            <a href="https://instagram.com/smileinndentalclinics" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-all hover:scale-110">
+            <a href="https://www.instagram.com/smileinn.dentalclinic?igsh=bmQ4MHozd3F0b2Rk&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-all hover:scale-110">
               <i className="bi bi-instagram text-lg"></i>
             </a>
-            <a href="https://facebook.com/smileinndentalclinics" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-all hover:scale-110">
+            <a href="https://www.facebook.com/share/1L9kwRwXAc/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-all hover:scale-110">
               <i className="bi bi-facebook text-lg"></i>
-            </a>
-            <a href="https://youtube.com/@smileinndentalclinics" target="_blank" rel="noopener noreferrer" className="text-white hover:text-secondary transition-all hover:scale-110">
-              <i className="bi bi-youtube text-xl"></i>
             </a>
           </div>
 

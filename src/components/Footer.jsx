@@ -21,7 +21,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <a 
-              href="https://instagram.com/smileinndentalclinics" 
+              href="https://www.instagram.com/smileinn.dentalclinic?igsh=bmQ4MHozd3F0b2Rk&utm_source=qr" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Follow Smile Inn on Instagram"
@@ -30,22 +30,13 @@ export default function Footer() {
               <i className="bi bi-instagram text-lg"></i>
             </a>
             <a 
-              href="https://facebook.com/smileinndentalclinics" 
+              href="https://www.facebook.com/share/1L9kwRwXAc/?mibextid=wwXIfr" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Follow Smile Inn on Facebook"
               className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors cursor-pointer"
             >
               <i className="bi bi-facebook text-lg"></i>
-            </a>
-            <a 
-              href="https://youtube.com/@smileinndentalclinics" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              aria-label="Follow Smile Inn on YouTube"
-              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors cursor-pointer"
-            >
-              <i className="bi bi-youtube text-lg"></i>
             </a>
           </div>
         </div>
