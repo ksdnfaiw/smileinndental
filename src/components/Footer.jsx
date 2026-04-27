@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import logo from '../assets/logo-full.png';
+import logoIcon from '../assets/logo-icon.png';
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -9,12 +9,21 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
         {/* Brand */}
         <div className="space-y-6">
-          <img 
-            src={logo} 
-            alt="Smile Inn Dental Clinics Logo" 
-            className="h-20 w-auto object-contain mix-blend-screen"
-            style={{ filter: 'invert(1) brightness(1.5)' }}
-          />
+          <NavLink to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img 
+              src={logoIcon} 
+              alt="Smile Inn Icon" 
+              className="h-12 w-auto object-contain"
+            />
+            <div className="flex flex-col leading-none">
+              <span className="text-white text-2xl md:text-3xl font-headline font-bold tracking-tight">Smile Inn</span>
+              <div className="mt-1">
+                <span className="bg-white text-[#302682] text-[9px] md:text-[11px] px-2 py-0.5 rounded-sm font-bold tracking-[0.2em] uppercase">Dental Clinics</span>
+              </div>
+            </div>
+          </NavLink>
+
+
           <p className="text-slate-200 text-lg leading-relaxed opacity-90">
             Redefining dental health through specialist-led artistry and advanced clinical protocols.
             Signature Specialist Care.
