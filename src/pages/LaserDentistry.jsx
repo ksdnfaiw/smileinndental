@@ -18,13 +18,13 @@ export default function LaserDentistry() {
       image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop'
     },
     { 
-      title: 'Photo Biomodulation Therapy', 
+      title: 'Photo Biomodulation', 
       icon: 'lightbulb', 
       desc: 'Low-level light therapy used to promote tissue healing, reduce inflammation, and effectively manage post-operative or chronic oral pain.',
       image: 'https://images.unsplash.com/photo-1559839734-2b71f1e3c770?q=80&w=2070&auto=format&fit=crop'
     },
     { 
-      title: 'Screening of Premalignant Lesions', 
+      title: 'Lesion Screening', 
       icon: 'visibility', 
       desc: 'Advanced laser screening for early detection of oral changes, ensuring timely and preventive care for potentially harmful oral lesions.',
       image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop'
@@ -41,21 +41,21 @@ export default function LaserDentistry() {
       />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1588776814546-1ffce47267a5?q=80&w=2070&auto=format&fit=crop" 
             alt="Advanced laser dentistry" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-teal-900/40 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
-            Modern <br /><span className="italic text-teal-200">Innovation.</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline text-primary mb-6 leading-tight drop-shadow-sm">
+            Modern <br /><span className="italic text-primary/80">Innovation</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
-            State-of-the-Art laser technology for quicker, pain-free, and minimally invasive dental care.
+          <p className="text-lg md:text-2xl text-slate-800 opacity-95 max-w-2xl mx-auto font-medium">
+            State-of-the-Art laser technology for quicker, pain-free, and minimally invasive dental care
           </p>
         </div>
       </section>
@@ -63,8 +63,8 @@ export default function LaserDentistry() {
       {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Painless Precision.</h2>
-          <p className="text-xl text-on-surface-variant leading-relaxed">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Painless Precision</h2>
+          <p className="text-xl text-slate-700 leading-relaxed">
             Laser dentistry represents the frontier of modern dental care. By using focused light energy, we can perform complex soft-tissue procedures with almost zero bleeding, less swelling, and faster recovery times.
           </p>
         </div>
@@ -80,16 +80,17 @@ export default function LaserDentistry() {
                   </div>
                   <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                <p className="text-xl text-slate-700 leading-relaxed opacity-95">
                   {s.desc}
                 </p>
                 <button 
                   onClick={() => navigate('/book')}
                   className="px-8 py-4 bg-teal-700 text-white rounded-xl font-bold hover:shadow-xl transition-all"
                 >
-                  Book Laser Session
+                  Learn About {s.title}
                 </button>
               </div>
+
               <div className="flex-1 w-full">
                 <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group border-b-8 border-teal-700/20">
                   <img 

@@ -80,7 +80,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#ccf07320,_transparent)]"></div>
         <div className="max-w-4xl mx-auto relative z-10">
           <span className="text-secondary-container font-bold text-xs tracking-widest uppercase mb-4 block">Expert Specialist Care</span>
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 leading-tight">Contact Smile Inn.</h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-white mb-6 leading-tight">Contact Smile Inn</h1>
           <p className="text-on-primary-container text-xl md:text-2xl font-light max-w-2xl mx-auto">
             Two locations across Hyderabad. Always here when you need us.
           </p>

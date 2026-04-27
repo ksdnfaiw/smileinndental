@@ -102,7 +102,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <span className="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">Our Team</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-primary">Expert Specialists. One Mission.</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-primary">Expert Specialists One Mission</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {doctors.map(({ name, role, badge, desc, img }) => (
@@ -135,7 +135,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto text-center bg-primary-container p-16 rounded-xl relative overflow-hidden">
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">Experience the Smile Inn Difference.</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">Experience the Smile Inn Difference</h2>
             <p className="text-on-primary-container mb-10 text-lg">Join over 15,000 happy patients who have trusted us with their smiles.</p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button

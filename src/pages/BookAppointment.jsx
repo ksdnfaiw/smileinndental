@@ -67,7 +67,7 @@ export default function BookAppointment() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <div className="max-w-3xl">
             <span className="text-secondary-container font-bold text-xs tracking-widest uppercase mb-4 block">Plan Your Visit</span>
-            <h1 className="text-4xl md:text-6xl font-headline text-white leading-tight">Book Your Appointment.</h1>
+            <h1 className="text-4xl md:text-6xl font-headline text-white leading-tight">Book Your Appointment</h1>
             <p className="mt-6 text-on-primary-container text-lg md:text-xl max-w-2xl leading-relaxed">
               Step into our modern dental studio. Experience personalized dental care in a space designed for your comfort and absolute well-being.
             </p>

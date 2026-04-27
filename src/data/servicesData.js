@@ -85,17 +85,18 @@ export const categories = [
     ]
   },
   {
-    title: 'Orthodontics',
+    title: 'Braces & Aligners',
     slug: 'orthodontics',
     icon: 'align_horizontal_center',
     shortDesc: 'Modern orthodontic solutions to align smiles for all ages.',
     color: 'blue',
     count: '2 treatments',
     services: [
-      { title: 'Clear Aligners (Invisalign)', desc: 'Virtually invisible removable trays specialized for discreet smile alignment.' },
-      { title: 'Traditional Braces', desc: 'High-precision metal braces for reliable, effective, and beautifully aligned smiles.' }
+      { title: 'Invisalign Aligners', desc: 'Virtually invisible removable trays specialized for discreet smile alignment.' },
+      { title: 'Traditional Braces', desc: 'High-precision metal or ceramic braces for reliable, effective, and beautifully aligned smiles.' }
     ]
   },
+
   {
     title: 'Pediatric Care',
     slug: 'pediatric-care',

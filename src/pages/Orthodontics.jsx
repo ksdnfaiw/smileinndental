@@ -8,9 +8,10 @@ export default function Orthodontics() {
     { 
       title: 'Invisalign Aligners', 
       icon: 'visibility_off', 
-      desc: 'Virtually invisible aligners designed to gradually shift your teeth into proper alignment without wires or brackets.',
+      desc: 'Virtually invisible removable trays designed to gradually shift your teeth into proper alignment without wires or brackets.',
       image: 'https://images.unsplash.com/photo-159742324403d-d1950bc49045?q=80&w=2070&auto=format&fit=crop'
     },
+
     { 
       title: 'Traditional Braces', 
       icon: 'format_list_numbered', 
@@ -22,28 +23,28 @@ export default function Orthodontics() {
   return (
     <div className="pt-0">
       <SEO 
-        title="Orthodontics & Clear Aligners · Smile Inn"
+        title="Braces & Aligners · Smile Inn"
         description="Expert orthodontic care at Smile Inn Dental Clinics. Invisalign aligners and traditional braces for perfectly aligned smiles in Hyderabad."
         keywords="orthodontist Hyderabad, Invisalign Nagole, braces cost Balapur, clear aligners Hyderabad, straight teeth"
         canonicalPath="/treatments/orthodontics"
       />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1591944030638-1d52a88496d5?q=80&w=2070&auto=format&fit=crop" 
-            alt="Orthodontic alignment" 
+            alt="Braces and aligners treatment" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
-            Perfect <br /><span className="italic text-blue-200">Alignment.</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline text-primary mb-6 leading-tight drop-shadow-sm">
+            Perfect <br /><span className="italic text-primary/80">Alignment</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
-            Modern orthodontic solutions tailored to create beautifully balanced and functional smiles.
+          <p className="text-lg md:text-2xl text-slate-800 opacity-95 max-w-2xl mx-auto font-medium">
+            Modern orthodontic solutions tailored to create beautifully balanced and functional smiles
           </p>
         </div>
       </section>
@@ -51,8 +52,8 @@ export default function Orthodontics() {
       {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Confidence in Alignment.</h2>
-          <p className="text-xl text-on-surface-variant leading-relaxed">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Confidence in Alignment</h2>
+          <p className="text-xl text-slate-700 leading-relaxed">
             Whether you choose the discretion of clear aligners or the proven reliability of traditional braces, our orthodontic specialists ensure a precision-planned journey to your perfect smile.
           </p>
         </div>
@@ -68,7 +69,7 @@ export default function Orthodontics() {
                   </div>
                   <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                <p className="text-xl text-slate-700 leading-relaxed opacity-95">
                   {s.desc}
                 </p>
                 <button 
@@ -98,7 +99,7 @@ export default function Orthodontics() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#93c5fd33,_transparent)]"></div>
             <div className="relative z-10 max-w-2xl mx-auto">
                 <h2 className="text-4xl md:text-6xl font-headline mb-8">Ready for Your New Smile?</h2>
-                <p className="text-xl text-on-primary-container mb-12 opacity-90">
+                <p className="text-xl text-slate-100 mb-12 opacity-95">
                     Schedule your orthodontic clinical assessment today and discover the best path to your perfect alignment.
                 </p>
                 <button 
@@ -113,3 +114,4 @@ export default function Orthodontics() {
     </div>
   );
 }
+

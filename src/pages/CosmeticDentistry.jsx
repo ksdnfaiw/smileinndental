@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { doctorsData } from '../data/doctorsData';
 
 export default function CosmeticDentistry() {
   const navigate = useNavigate();
+  const drChandrakanth = doctorsData.find(d => d.name.includes('Chandrakanth'));
 
   const services = [
     { 
@@ -41,31 +43,41 @@ export default function CosmeticDentistry() {
       />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1609902726285-00668009f004?q=80&w=2070&auto=format&fit=crop" 
             alt="Cosmetic dental aesthetics" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-pink-900/40 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <span className="text-secondary-container font-bold tracking-[0.2em] uppercase mb-4 block animate-fade-in">Led by Dr. Chandrakanth MDS</span>
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
-            Artistic <br /><span className="italic text-pink-200">Perfection.</span>
+          <span className="text-primary font-bold tracking-[0.2em] uppercase mb-4 block animate-fade-in">Led by Dr. Chandrakanth MDS</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline text-primary mb-6 leading-tight drop-shadow-sm">
+            Artistic <br /><span className="italic text-primary/80">Perfection</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
-            Designing confident smiles through a blend of clinical mastery and artistic vision.
+          <p className="text-lg md:text-2xl text-slate-800 opacity-95 max-w-2xl mx-auto font-medium">
+            Designing confident smiles through a blend of clinical mastery and artistic vision
           </p>
         </div>
       </section>
 
       {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">The Science of Beauty.</h2>
-          <p className="text-xl text-on-surface-variant leading-relaxed">
+        <div className="text-center max-w-3xl mx-auto mb-20 flex flex-col items-center">
+          {drChandrakanth && (
+            <div className="mb-12 group relative">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-pink-100 shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                <img src={drChandrakanth.img} alt={drChandrakanth.name} className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-pink-700 text-white px-6 py-1 rounded-full text-sm font-bold shadow-lg">
+                Clinical Director
+              </div>
+            </div>
+          )}
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">The Science of Beauty</h2>
+          <p className="text-xl text-slate-700 leading-relaxed">
             Led by **Dr. Chandrakanth MDS**, our cosmetic department specializes in restorative artistry. We don't just fix teeth; we reconstruct confidence using the global Gold Standard in dental aesthetics.
           </p>
         </div>
@@ -81,7 +93,7 @@ export default function CosmeticDentistry() {
                   </div>
                   <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                <p className="text-xl text-slate-700 leading-relaxed opacity-95">
                   {s.desc}
                 </p>
                 <button 
@@ -91,6 +103,7 @@ export default function CosmeticDentistry() {
                   Schedule Smile Assessment
                 </button>
               </div>
+
               <div className="flex-1 w-full">
                 <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group border-b-8 border-pink-700/20">
                   <img 

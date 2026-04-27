@@ -14,21 +14,21 @@ export default function EstheticProcedures() {
       />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1609902726285-00668009f004?q=80&w=2070&auto=format&fit=crop" 
             alt="Esthetic dental care" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-pink-900/40 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
-            Harmonious <br /><span className="italic text-pink-200">Beauty.</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline text-primary mb-6 leading-tight drop-shadow-sm">
+            Harmonious <br /><span className="italic text-primary/80">Beauty</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
-            Advanced esthetic procedures designed to complement your dental work and enhance your natural facial harmony.
+          <p className="text-lg md:text-2xl text-slate-800 opacity-95 max-w-2xl mx-auto font-medium">
+            Advanced esthetic procedures designed to complement your dental work and enhance your natural facial harmony
           </p>
         </div>
       </section>
@@ -36,8 +36,8 @@ export default function EstheticProcedures() {
       {/* Content */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Refining Your Natural Look.</h2>
-          <p className="text-xl text-on-surface-variant leading-relaxed mb-12">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Refining Your Natural Look</h2>
+          <p className="text-xl text-slate-700 leading-relaxed mb-12">
             Our esthetic department focuses on the subtle details that make a smile truly radiant. From lip contouring to facial symmetry adjustments, we provide clinical solutions for aesthetic excellence.
           </p>
           <div className="bg-pink-50 p-12 rounded-[3rem] border border-pink-100">
@@ -54,6 +54,7 @@ export default function EstheticProcedures() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }

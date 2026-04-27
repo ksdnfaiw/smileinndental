@@ -5,21 +5,19 @@ import logoIcon from '../assets/logo-icon.png';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const navigate = useNavigate();
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  const handleMouseEnter = () => {
+    if (dropdownTimeout) clearTimeout(dropdownTimeout);
+    setDropdownOpen(true);
+  };
 
-  const links = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About Us' },
-    { to: '/treatments', label: 'Treatments', isDropdown: true },
-    { to: '/contact', label: 'Contact' },
-  ];
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 200); // Small delay to allow smoother transition to the dropdown
+    setDropdownTimeout(timeout);
+  };
 
   const treatments = [
     { to: '/treatments/general-dentistry', label: 'General Dentistry' },
@@ -27,7 +25,7 @@ export default function Navbar() {
     { to: '/treatments/cosmetic-dentistry', label: 'Cosmetic Dentistry' },
     { to: '/treatments/oral-surgery', label: 'Oral Surgery' },
     { to: '/treatments/laser-dentistry', label: 'Laser Dentistry' },
-    { to: '/treatments/orthodontics', label: 'Orthodontics' },
+    { to: '/treatments/orthodontics', label: 'Braces & Aligners' },
     { to: '/treatments/pediatric-care', label: 'Pediatric Care' },
     { to: '/treatments/oral-cancer', label: 'Oral Cancer' },
     { to: '/treatments/esthetic-procedures', label: 'Esthetic Procedures' },
@@ -65,8 +63,8 @@ export default function Navbar() {
               <div 
                 key={label}
                 className="relative group"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 <NavLink
                   to={to}
@@ -87,6 +85,8 @@ export default function Navbar() {
                   className={`absolute top-full left-0 w-64 bg-white rounded-2xl shadow-2xl py-4 mt-2 transition-all duration-300 transform origin-top ${
                     dropdownOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
                   }`}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   {treatments.map((t) => (
                     <NavLink
@@ -100,6 +100,7 @@ export default function Navbar() {
                   ))}
                 </div>
               </div>
+
             ) : (
               <NavLink
                 key={to}

@@ -41,12 +41,13 @@ export default function Treatments() {
       features: ['Laser Gum Bleaching', 'Flap Surgery', 'Painless Procedures']
     },
     {
-      title: 'Orthodontics',
+      title: 'Braces & Aligners',
       path: '/treatments/orthodontics',
       icon: 'align_horizontal_center',
       desc: 'Modern orthodontic solutions to align smiles for all ages.',
-      features: ['Clear Aligners', 'Traditional Braces', 'MDS Supervision']
+      features: ['Invisalign Aligners', 'Traditional Braces', 'MDS Supervision']
     },
+
     {
       title: 'Pediatric Care',
       path: '/treatments/pediatric-care',

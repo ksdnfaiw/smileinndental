@@ -45,11 +45,23 @@ export default function Footer() {
           <h5 className="text-lime-400 font-bold mb-6 tracking-[0.2em] uppercase text-xs">Treatments</h5>
           <ul className="space-y-4 text-slate-200">
             <li><NavLink to="/treatments/general-dentistry" className="hover:text-lime-400 transition-colors text-base">General Dentistry</NavLink></li>
-            <li><NavLink to="/treatments/orthodontics" className="hover:text-lime-400 transition-colors text-base">Orthodontics</NavLink></li>
+            <li><NavLink to="/treatments/emergency-care" className="hover:text-lime-400 transition-colors text-base">Emergency Care</NavLink></li>
             <li><NavLink to="/treatments/cosmetic-dentistry" className="hover:text-lime-400 transition-colors text-base">Cosmetic Dentistry</NavLink></li>
             <li><NavLink to="/treatments/oral-surgery" className="hover:text-lime-400 transition-colors text-base">Oral Surgery</NavLink></li>
+            <li><NavLink to="/treatments/laser-dentistry" className="hover:text-lime-400 transition-colors text-base">Laser Dentistry</NavLink></li>
           </ul>
         </div>
+
+        <div>
+          <h5 className="text-lime-400 font-bold mb-6 tracking-[0.2em] uppercase text-xs opacity-0 hidden md:block">More Treatments</h5>
+          <ul className="space-y-4 text-slate-200">
+            <li><NavLink to="/treatments/orthodontics" className="hover:text-lime-400 transition-colors text-base">Braces & Aligners</NavLink></li>
+            <li><NavLink to="/treatments/pediatric-care" className="hover:text-lime-400 transition-colors text-base">Pediatric Care</NavLink></li>
+            <li><NavLink to="/treatments/oral-cancer" className="hover:text-lime-400 transition-colors text-base">Oral Cancer</NavLink></li>
+            <li><NavLink to="/treatments/esthetic-procedures" className="hover:text-lime-400 transition-colors text-base">Esthetic Procedures</NavLink></li>
+          </ul>
+        </div>
+
 
         {/* Clinics */}
         <div>

@@ -53,21 +53,21 @@ export default function GeneralDentistry() {
       />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop" 
             alt="General dental checkup procedure" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/60 backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-8xl font-headline text-white mb-6 leading-tight drop-shadow-lg">
-            Foundational <br /><span className="italic text-secondary-fixed-dim">Excellence.</span>
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-headline text-primary mb-6 leading-tight drop-shadow-sm">
+            Foundational <br /><span className="italic text-primary/80">Excellence</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white opacity-90 max-w-2xl mx-auto font-light">
-            Preventive care designed to keep your natural smile healthy and radiant for a lifetime.
+          <p className="text-lg md:text-2xl text-slate-800 opacity-95 max-w-2xl mx-auto font-medium">
+            Preventive care designed to keep your natural smile healthy and radiant for a lifetime
           </p>
         </div>
       </section>
@@ -75,8 +75,8 @@ export default function GeneralDentistry() {
       {/* Intro */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Prevention is the Best Cure.</h2>
-          <p className="text-xl text-on-surface-variant leading-relaxed">
+          <h2 className="text-4xl md:text-6xl font-headline text-primary mb-8">Prevention is the Best Cure</h2>
+          <p className="text-xl text-slate-700 leading-relaxed">
             At Smile Inn, we believe in a proactive approach to dental health. Our general dentistry services are built on a sustainable foundation for your oral well-being, led by master clinicians using state-of-the-art diagnostic technology.
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function GeneralDentistry() {
                   </div>
                   <h3 className="text-3xl md:text-4xl font-headline text-primary">{s.title}</h3>
                 </div>
-                <p className="text-xl text-on-surface-variant leading-relaxed opacity-90">
+                <p className="text-xl text-slate-700 leading-relaxed opacity-95">
                   {s.desc}
                 </p>
                 <button 
@@ -102,6 +102,7 @@ export default function GeneralDentistry() {
                   Book for {s.title}
                 </button>
               </div>
+
               <div className="flex-1 w-full">
                 <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl group">
                   <img 

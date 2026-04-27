@@ -64,12 +64,16 @@ export default function Home() {
 
   const services = [
     { icon: 'dentistry', title: 'General Dentistry', desc: 'Foundational care including cleanings, fillings, and preventative diagnostics for long-term health.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/general-dentistry' },
-    { icon: 'straighten', title: 'Orthodontics', desc: 'Expert alignment solutions from traditional braces to modern clear aligners like Invisalign.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/orthodontics' },
-    { icon: 'emergency', title: 'Emergency Care', desc: 'Immediate relief for acute pain, broken teeth, or dental trauma. Prioritized same-day booking.', inverted: true, path: '/services/restorative-and-general' },
+    { icon: 'straighten', title: 'Braces & Aligners', desc: 'Expert alignment solutions from traditional braces to modern clear aligners like Invisalign.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/orthodontics' },
+    { icon: 'emergency', title: 'Emergency Care', desc: 'Immediate relief for acute pain, broken teeth, or dental trauma. Prioritized same-day booking.', inverted: true, path: '/treatments/emergency-care' },
     { icon: 'health_and_safety', title: 'Cosmetic Dentistry', desc: 'Smile makeovers, professional whitening, and porcelain veneers for your most confident self.', hoverColor: 'hover:bg-secondary hover:text-white', path: '/treatments/cosmetic-dentistry' },
     { icon: 'medical_services', title: 'Oral Surgery', desc: 'Precision surgical care including wisdom tooth extraction and dental implant placements.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/oral-surgery' },
-    { icon: 'family_restroom', title: 'Pediatric Care', desc: 'Specialized, gentle dental care designed to build a positive lifelong habit for children.', hoverColor: 'hover:bg-secondary hover:text-white', path: '/services/child-dentistry' },
+    { icon: 'family_restroom', title: 'Pediatric Care', desc: 'Specialized, gentle dental care designed to build a positive lifelong habit for children.', hoverColor: 'hover:bg-secondary hover:text-white', path: '/treatments/pediatric-care' },
+    { icon: 'biotech', title: 'Laser Dentistry', desc: 'Minimally invasive dental care using advanced laser technology for faster healing.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/laser-dentistry' },
+    { icon: 'health_and_safety', title: 'Oral Cancer', desc: 'Advanced screening and early detection of oral malignancies for preventive care.', hoverColor: 'hover:bg-secondary hover:text-white', path: '/treatments/oral-cancer' },
+    { icon: 'auto_awesome', title: 'Esthetic Procedures', desc: 'Aesthetic enhancements for a harmonious and beautiful facial appearance.', hoverColor: 'hover:bg-primary hover:text-white', path: '/treatments/esthetic-procedures' },
   ];
+
 
   const doctors = doctorsData;
 
