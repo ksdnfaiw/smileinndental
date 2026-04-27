@@ -5,7 +5,22 @@ import logoIcon from '../assets/logo-icon.png';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const links = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About Us' },
+    { to: '/treatments', label: 'Treatments', isDropdown: true },
+    { to: '/contact', label: 'Contact' },
+  ];
 
   const handleMouseEnter = () => {
     if (dropdownTimeout) clearTimeout(dropdownTimeout);
@@ -15,7 +30,7 @@ export default function Navbar() {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setDropdownOpen(false);
-    }, 200); // Small delay to allow smoother transition to the dropdown
+    }, 200);
     setDropdownTimeout(timeout);
   };
 
